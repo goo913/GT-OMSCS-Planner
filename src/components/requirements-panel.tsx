@@ -181,7 +181,13 @@ function Pacing({
 }) {
   const { earliestCompletion, slackTerms, remainingCourses } = validation
   const start = earliestCompletion ?? plan.matriculationTerm
-  const options = Array.from({ length: 13 }, (_, i) => termFromIndex(termIndex(start) + i))
+  // The currently-set target has to stay in the list even when it is now behind the
+  // earliest possible finish — otherwise the Select renders blank and the plan looks
+  // like it has no target at exactly the moment the target became unreachable.
+  const options = [...new Set([
+    ...(plan.targetGraduationTerm ? [plan.targetGraduationTerm] : []),
+    ...Array.from({ length: 13 }, (_, i) => termFromIndex(termIndex(start) + i)),
+  ])].sort((a, b) => termIndex(a) - termIndex(b))
 
   const infeasible = slackTerms !== null && slackTerms < 0
   const zeroSlack = slackTerms === 0 && remainingCourses > 0

@@ -391,6 +391,7 @@ console.log('\n— pacing —')
   p.targetGraduationTerm = '2027SU'
   const v = validate(p)
   check('a Summer 2027 target is not reachable', v.slackTerms! < 0, true)
+  check('  … and the earliest finish is still reported', v.earliestCompletion, '2028SU')
 }
 
 console.log('\n— a complete, valid AI plan —')
