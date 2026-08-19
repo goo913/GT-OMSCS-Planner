@@ -12,7 +12,8 @@
     "test:flows": "node scripts/flow-test.mjs",
     "data": "python3 scripts/build-data.py",
     "data:refresh": "python3 scripts/fetch-sources.py && python3 scripts/build-data.py",
-    "test:realtime": "node scripts/realtime-test.mjs"
+    "test:realtime": "node scripts/realtime-test.mjs",
+    "test:share": "node scripts/share-test.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",

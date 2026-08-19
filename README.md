@@ -60,6 +60,7 @@ Without `.env.local` the app runs entirely from `localStorage` and the sync pill
 | `npm test` | Rule scenarios (`scripts/validate-selftest.ts`) — **run this after any rule or data change** |
 | `npm run test:flows` | Browser checks for the interface: cap enforcement, the course dialog, grade tracking, the slot rail, sidebars, ⌘K, mobile, and the colour budget. Needs a dev server and `npm i --no-save playwright-core`. Runs offline from localStorage, so it never touches the shared plan. |
 | `npm run test:realtime` | Two-browser Firestore sync checks. **Destructive** — it writes to and clears the shared plan document. Export first. |
+| `npm run test:share` | Checks that one plan really is shared: a browser holding the plan only in localStorage publishes it, and a browser that has never opened the app sees it. **Destructive**, same caveat. |
 | `npm run lint` | oxlint |
 | `npm run data` | Rebuild `src/data/*.json` from `data/sources/` |
 | `npm run data:refresh` | Re-scrape omscs.gatech.edu and omscentral.com, then rebuild |
@@ -169,6 +170,15 @@ dropped connection does. The plan keeps working from `localStorage` either way; 
 ### How syncing behaves
 
 - `onSnapshot` on the one document; remote edits land without a refresh.
+- **On the first snapshot the app decides which copy is the truth.** If the shared
+  document is empty but this browser holds a plan, it publishes that plan; same if this
+  browser's copy is newer than the shared one, which is how an offline session or a
+  failed write gets back in. Otherwise the shared copy wins. Without this the app is
+  quietly single-device: whoever has the plan in `localStorage` sees it, and everyone
+  else opens an empty board.
+- When this device does overwrite the shared plan, whatever it replaced is kept under
+  `gt-omscs-planner:replaced` in `localStorage`, so a last-write-wins decision is never
+  unrecoverable.
 - Writes are debounced ~500 ms and sent as **dotted field paths** (`placements.CS_6601.term`), so two
   people editing different courses merge at the field level instead of overwriting each other's
   document. Last write wins per field.

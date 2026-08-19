@@ -19,6 +19,9 @@ export type SyncState = 'local-only' | 'connecting' | 'synced' | 'saving' | 'off
 
 const LS_KEY = 'gt-omscs-planner:plan'
 const LS_BACKUP_KEY = 'gt-omscs-planner:last-synced'
+/** Whatever this device overwrote when it published its own copy, kept so a
+ *  last-write-wins decision is never unrecoverable. */
+const LS_REPLACED_KEY = 'gt-omscs-planner:replaced'
 const WRITE_DEBOUNCE_MS = 500
 
 function readLocal(key: string): Plan | null {
@@ -79,6 +82,7 @@ export function usePlan(): PlanApi {
   const applyingRemote = useRef(false)
   const docExists = useRef(false)
   const conn = useRef<PlanDoc | null>(null)
+  const reconciled = useRef(false)
   // The seed write has to send a whole plan, not a patch — firestore.rules requires
   // every required top-level key to be present in the resulting document. Kept in a
   // ref (updated after commit, not during render) so flush can read it 500ms later.
@@ -104,12 +108,47 @@ export function usePlan(): PlanApi {
         c.ref,
         (snap) => {
           docExists.current = snap.exists()
-          if (snap.exists()) {
-            const incoming = normalizePlan(snap.data())
+          const remote = snap.exists() ? normalizePlan(snap.data()) : null
+
+          /**
+           * First snapshot only: decide which copy is the truth.
+           *
+           * Without this the app was quietly single-device. A browser that already
+           * held the plan in localStorage would render it happily while the shared
+           * document stayed empty, so anyone else opening the same URL saw nothing —
+           * and the plan was only pushed up on the *next* edit, which might never come.
+           */
+          if (!reconciled.current) {
+            reconciled.current = true
+            const local = latest.current
+            const localHasContent =
+              Object.keys(local.placements).length > 0 || Object.keys(local.notes).length > 0
+
+            // Nobody has published a plan yet, but this device has one: publish it.
+            // Same when this device holds edits the shared document never received —
+            // an offline session, or a write that failed and was never retried.
+            const localIsNewer = remote !== null && local.updatedAt > remote.updatedAt
+            if (localHasContent && (remote === null || localIsNewer)) {
+              if (remote) writeLocal(LS_REPLACED_KEY, remote)
+              setSync('saving')
+              void c.fs
+                .setDoc(c.ref, { ...local, updatedAt: Date.now() })
+                .then(() => {
+                  docExists.current = true
+                  setSync('synced')
+                  setLastSyncedAt(Date.now())
+                })
+                .catch(() => setSync('offline'))
+              setReady(true)
+              return
+            }
+          }
+
+          if (remote) {
             applyingRemote.current = true
-            setPlan(incoming)
-            writeLocal(LS_KEY, incoming)
-            writeLocal(LS_BACKUP_KEY, incoming)
+            setPlan(remote)
+            writeLocal(LS_KEY, remote)
+            writeLocal(LS_BACKUP_KEY, remote)
             setLastSyncedAt(Date.now())
             applyingRemote.current = false
           }
@@ -360,4 +399,9 @@ export function usePlan(): PlanApi {
 /** The rolling snapshot kept after every successful sync, for the export panel. */
 export function readBackup(): Plan | null {
   return readLocal(LS_BACKUP_KEY)
+}
+
+/** The shared plan this device replaced when it published its own, if that happened. */
+export function readReplaced(): Plan | null {
+  return readLocal(LS_REPLACED_KEY)
 }

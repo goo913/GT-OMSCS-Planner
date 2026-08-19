@@ -57,12 +57,15 @@ export function normalizePlan(raw: unknown): Plan {
       const term = typeof p.term === 'string' ? p.term : null
       if (!code || !term || !/^\d{4}(FA|SP|SU)$/.test(term)) continue
       if (!lookup(code)) continue
-      placements[key || codeKey(code)] = {
+      // Never emit `undefined`: Firestore rejects it outright, which would break
+      // both the boot reconciliation and importing a hand-edited export.
+      const placement: Placement = {
         code,
         term,
         grade: (typeof p.grade === 'string' ? p.grade : null) as Grade | null,
-        updatedAt: typeof p.updatedAt === 'number' ? p.updatedAt : undefined,
       }
+      if (typeof p.updatedAt === 'number') placement.updatedAt = p.updatedAt
+      placements[key || codeKey(code)] = placement
     }
   }
 

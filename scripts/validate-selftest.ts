@@ -7,7 +7,7 @@
 import { COURSES, RULES, SPECIALIZATIONS } from '../src/lib/catalog'
 import { costForTerm, feeCliff } from '../src/lib/cost'
 import { checkCap } from '../src/lib/placement'
-import { emptyPlan } from '../src/lib/plan'
+import { emptyPlan, normalizePlan } from '../src/lib/plan'
 import { termLabel, timeLimitTerm } from '../src/lib/terms'
 import { validate } from '../src/lib/validate'
 import type { Grade, Plan, TermId } from '../src/types'
@@ -274,6 +274,29 @@ console.log('\n— specialization matching (AI) —')
   )
   check('three design-sub-area electives leave the interactive slot open',
     v.slots.filter((s) => s.filledBy).length, 4)
+}
+
+console.log('\n— the plan document is always writable —')
+{
+  // Firestore rejects `undefined`, so nothing normalizePlan produces may contain one.
+  const raw = {
+    schemaVersion: 1,
+    specialization: 'ai',
+    matriculationTerm: '2026FA',
+    placements: { CS_6035: { code: 'CS 6035', term: '2026FA' } },
+    notes: {},
+    updatedAt: 5,
+  }
+  const p = normalizePlan(raw)
+  const undef: string[] = []
+  const walk = (o: unknown, path: string) => {
+    if (o === undefined) return undef.push(path)
+    if (o && typeof o === 'object')
+      for (const [k, v] of Object.entries(o)) walk(v, path ? `${path}.${k}` : k)
+  }
+  walk(p, '')
+  check('a placement with no timestamp normalises without undefined', undef, [])
+  check('  … and simply omits the key', 'updatedAt' in p.placements.CS_6035, false)
 }
 
 console.log('\n— the cap is enforced at the drop, not just reported —')
