@@ -1,0 +1,56 @@
+{
+ "version": "2026.08.19",
+ "generatedAt": "2026-08-19T14:51:44Z",
+ "terms": {
+  "2026FA": {
+   "perCreditHour": 227,
+   "perCreditHourAlt": {
+    "outOfState": 236,
+    "outOfCountry": 248
+   },
+   "onlineLearningFee": {
+    "under4Hours": 212,
+    "atLeast4Hours": 531
+   },
+   "estimated": false,
+   "source": "Fall 2026 Tuition and Fee Rates per Semester.pdf"
+  },
+  "2027SP": {
+   "perCreditHour": 227,
+   "perCreditHourAlt": {
+    "outOfState": 236,
+    "outOfCountry": 248
+   },
+   "onlineLearningFee": {
+    "under4Hours": 212,
+    "atLeast4Hours": 531
+   },
+   "estimated": false,
+   "source": "Spring 2027 Tuition and Fee Rates per Semester.pdf"
+  },
+  "2027SU": {
+   "perCreditHour": 227,
+   "perCreditHourAlt": {
+    "outOfState": 236,
+    "outOfCountry": 248
+   },
+   "onlineLearningFee": {
+    "under4Hours": 183,
+    "atLeast4Hours": 455
+   },
+   "estimated": false,
+   "source": "Summer 2027 Tuition and Fee Rates per Semester.pdf"
+  }
+ },
+ "carryForward": {
+  "FA": "2026FA",
+  "SP": "2027SP",
+  "SU": "2027SU"
+ },
+ "notes": [
+  "Estimates only. Figures come from the published Georgia Tech Bursar rate sheets and exclude textbooks, proctoring, and any course-specific fees.",
+  "OMSCS students are ineligible for the GT Payment Plan (Fall 2026 Orientation Document).",
+  "International students holding an F or J visa also pay a $100 International Student Fee."
+ ],
+ "sourceUrl": "https://bursar.gatech.edu/tuition-fees"
+}

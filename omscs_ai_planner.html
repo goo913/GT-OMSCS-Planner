@@ -1,0 +1,368 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMSCS AI 졸업 플래너</title>
+<style>
+:root{
+--navy:#003057; --navy2:#0b4570; --gold:#B3A369; --gold-d:#8a7c45;
+--paper:#EEF1F5; --card:#fff; --ink:#16202b; --ink2:#556170; --ink3:#8b95a1;
+--line:#d9e0e8; --ok:#0F6E56; --okbg:#E1F5EE; --warn:#8b5a06; --warnbg:#FBF0DC;
+--bad:#9c2b2b; --badbg:#FBEAEA; --r:10px;
+--sans:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic',system-ui,sans-serif;
+--mono:'SF Mono','JetBrains Mono',Menlo,Consolas,'Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:24px 20px 80px}
+h1{font-size:24px;font-weight:700;letter-spacing:-.02em}
+h2{font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+h2 .n{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--gold-d);background:#f3f0e4;border:1px solid #e2dcc6;padding:2px 7px;border-radius:5px;letter-spacing:.05em}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}
+.mut{color:var(--ink2);font-size:13px}
+.mut3{color:var(--ink3);font-size:12px}
+
+header{background:var(--navy);color:#fff;border-radius:14px;padding:22px 24px;margin-bottom:18px}
+header h1{color:#fff}
+header .sub{color:#9fb8cd;font-size:13px;margin-top:2px}
+.verdict{margin-top:18px;padding:16px 18px;border-radius:11px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.verdict .big{font-size:18px;font-weight:700;display:flex;align-items:center;gap:10px}
+.dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+.bar{height:9px;background:rgba(255,255,255,.15);border-radius:99px;overflow:hidden;margin-top:12px}
+.bar i{display:block;height:100%;background:var(--gold);border-radius:99px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+.hstats{display:flex;gap:26px;flex-wrap:wrap;margin-top:12px}
+.hstat b{font-family:var(--mono);font-size:21px;font-weight:700;display:block;letter-spacing:-.02em}
+.hstat span{font-size:11px;color:#9fb8cd;text-transform:uppercase;letter-spacing:.07em}
+
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:10px}
+.chk{display:flex;gap:11px;align-items:flex-start;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#fbfcfd}
+.chk.on{background:var(--okbg);border-color:#b6e0d0}
+.chk.warn{background:var(--warnbg);border-color:#ecd9ac}
+.chk.off{background:#fbfcfd}
+.chk .ic{width:19px;height:19px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;background:#c2cbd5;margin-top:2px}
+.chk.on .ic{background:var(--ok)} .chk.warn .ic{background:var(--warn)} .chk.bad .ic{background:var(--bad)}
+.chk.bad{background:var(--badbg);border-color:#eec4c4}
+.chk b{font-size:13.5px;font-weight:600;display:block}
+.chk small{color:var(--ink2);font-size:12px}
+
+.railgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}
+@media(max-width:900px){.railgrid{grid-template-columns:1fr}}
+.grp{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fbfcfd}
+.grp.spec{border-color:#c3cfdb;background:#f6f9fc}
+.grp>h3{font-size:13px;font-weight:700;margin-bottom:2px}
+.grp>p{font-size:11.5px;color:var(--ink2);margin-bottom:11px}
+.slotrow{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin:12px 0 6px}
+.slot{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:8px;border:1.5px dashed #c9d3de;background:#fff;margin-bottom:6px;min-height:44px}
+.slot.filled{border-style:solid;border-color:var(--navy);background:var(--navy);color:#fff}
+.slot.filled.free{border-color:#5d6b7a;background:#5d6b7a}
+.slot .cd{font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:-.02em}
+.slot .nm{font-size:12px;opacity:.82;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.slot .ph{font-size:12px;color:var(--ink3)}
+
+.semgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}
+.sem{border:1px solid var(--line);border-radius:12px;background:#fbfcfd;padding:13px;min-height:150px}
+.sem.goal{border-color:var(--gold);background:#fdfcf7}
+.sem.over{border-style:dashed;opacity:.85}
+.sem.cap{border-color:var(--bad);background:var(--badbg)}
+.capbad{font-size:11px;font-weight:700;color:var(--bad);font-family:var(--mono)}
+.sem h4{font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.sem .load{font-size:11px;font-family:var(--mono);color:var(--ink2);margin-bottom:9px}
+.sem .load.hot{color:var(--bad);font-weight:700}
+.pill{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 9px;margin-bottom:6px;font-size:12px}
+.pill .cd{font-family:var(--mono);font-weight:700;font-size:11.5px}
+.pill .x{margin-left:auto;cursor:pointer;color:var(--ink3);font-size:15px;line-height:1;padding:0 3px;background:none;border:0;font-family:inherit}
+.pill .x:hover{color:var(--bad)}
+.tag{font-size:9.5px;font-weight:700;padding:1.5px 5px;border-radius:4px;letter-spacing:.03em}
+.t-algo{background:#EEEDFE;color:#3C3489} .t-core{background:#E1F5EE;color:#085041}
+.t-elec{background:#FAEEDA;color:#633806} .t-free{background:#EEF1F5;color:#556170}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+input[type=search],select{font-family:inherit;font-size:13px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input[type=search]{flex:1;min-width:150px}
+.chipbtn{font-family:inherit;font-size:12px;font-weight:600;padding:6px 11px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--ink2);cursor:pointer}
+.chipbtn.on{background:var(--navy);border-color:var(--navy);color:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);font-weight:700;padding:7px 8px;border-bottom:1.5px solid var(--line);white-space:nowrap}
+td{padding:8px;border-bottom:1px solid #edf1f5;vertical-align:middle}
+tr.taken{background:#f4f8f5}
+tr:hover{background:#f7fafc}
+td.c{text-align:center}
+.addsel{font-size:11.5px;padding:4px 6px;border-radius:6px;border:1px solid var(--line);background:#fff;font-family:inherit;cursor:pointer;max-width:118px}
+.seat{font-family:var(--mono);font-size:11px;padding:2px 6px;border-radius:5px;white-space:nowrap;font-weight:700}
+.s-ok{background:var(--okbg);color:var(--ok)} .s-low{background:var(--warnbg);color:var(--warn)}
+.s-wl{background:var(--badbg);color:var(--bad)} .s-no{background:#eef1f5;color:var(--ink3)}
+.dfill{display:inline-block;height:5px;border-radius:3px;background:var(--navy);vertical-align:middle}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.btn{font-family:inherit;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--navy)}
+.btn.p{background:var(--navy);border-color:var(--navy);color:#fff}
+textarea{width:100%;font-family:var(--mono);font-size:11px;padding:10px;border:1px solid var(--line);border-radius:8px;min-height:70px;margin-top:9px;resize:vertical}
+.note{font-size:12px;color:var(--ink2);background:#f6f9fc;border-left:3px solid var(--gold);padding:10px 13px;border-radius:0 8px 8px 0;margin-top:12px}
+:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+</style>
+<div class="wrap">
+<header>
+  <h1>OMSCS 졸업 플래너 — Artificial Intelligence</h1>
+  <div class="sub">Georgia Tech · MS Computer Science · Fall 2026 입학 · Catalog 2026–2027</div>
+  <div class="verdict">
+    <div class="big"><span class="dot" id="vdot"></span><span id="vtxt"></span></div>
+    <div class="bar"><i id="vbar" style="width:0%"></i></div>
+    <div class="hstats">
+      <div class="hstat"><b id="s1">0</b><span>이수 학점</span></div>
+      <div class="hstat"><b id="s2">0</b><span>과목 수</span></div>
+      <div class="hstat"><b id="s3">0</b><span>Spec 충족</span></div>
+      <div class="hstat"><b id="s4">0</b><span>Foundational</span></div>
+      <div class="hstat"><b id="s5">—</b><span>예상 졸업</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="card">
+  <h2><span class="n">01</span>졸업 요건 체크</h2>
+  <div class="checks" id="checks"></div>
+</div>
+
+<div class="card">
+  <h2><span class="n">02</span>요건 슬롯 — 10칸을 다 채우면 졸업</h2>
+  <div class="railgrid">
+    <div class="grp spec">
+      <h3>AI specialization · 15학점 · 5과목</h3>
+      <p>전부 B 이상 필요. 각 줄에 정해진 개수만큼 채워야 함.</p>
+      <div class="slotrow">알고리즘 — 1과목</div><div id="sl-algo"></div>
+      <div class="slotrow">코어 — 2과목</div><div id="sl-core"></div>
+      <div class="slotrow">선택 — 2과목</div><div id="sl-elec"></div>
+    </div>
+    <div class="grp">
+      <h3>자유 선택 · 15학점 · 5과목</h3>
+      <p>OMSCS 아무 과목이나. C 이상이면 인정.</p>
+      <div class="slotrow">자유 슬롯 — 5과목</div><div id="sl-free"></div>
+    </div>
+  </div>
+  <div class="note">코어를 3과목 이상 들으면 초과분이 자동으로 선택 칸에 들어갑니다. 슬롯 배치는 규칙에 따라 자동 계산됩니다.</div>
+</div>
+
+<div class="card">
+  <h2><span class="n">03</span>학기별 계획</h2>
+  <div class="semgrid" id="sems"></div>
+  <div class="note"><b>OMSCS 수강 제한:</b> Fall·Spring은 최대 2과목(+세미나 1), Summer는 최대 1과목. 성적이 좋아도 늘어나지 않는 프로그램 규정입니다. 따라서 2년(6학기) 최대치가 정확히 10과목 — <b>여유가 0입니다.</b> 한 과목만 미끄러져도 졸업이 한 학기 밀립니다.<br><br>금색 테두리 = 2년 목표 구간. 주당 시간은 OMSCentral 평균이며 체감은 다를 수 있습니다. 여름은 11~12주로 압축돼 같은 과목도 더 빡셉니다.</div>
+</div>
+
+<div class="card">
+  <h2><span class="n">04</span>과목 고르기</h2>
+  <div class="filters">
+    <input type="search" id="q" placeholder="과목 코드나 이름 검색 (예: 6035, database)">
+    <button class="chipbtn" data-f="ai">AI spec만</button>
+    <button class="chipbtn" data-f="found">Foundational만</button>
+    <button class="chipbtn" data-f="open">Fall 2026 등록 가능만</button>
+    <select id="sort">
+      <option value="code">코드순</option>
+      <option value="diff">난이도 낮은 순</option>
+      <option value="work">주당 시간 적은 순</option>
+      <option value="rating">평점 높은 순</option>
+      <option value="seat">남은 자리 많은 순</option>
+    </select>
+  </div>
+  <div style="overflow-x:auto"><table>
+    <thead><tr>
+      <th>과목</th><th>이름</th><th class="c">Found.</th><th class="c">AI 칸</th>
+      <th class="c">난이도</th><th class="c">주당</th><th class="c">평점</th>
+      <th class="c">Fall 2026</th><th class="c">CRN</th><th>담기</th>
+    </tr></thead><tbody id="tb"></tbody>
+  </table></div>
+  <div class="note">난이도·주당 시간·평점 출처: OMSCentral 학생 리뷰 평균. 자리 수는 2026-08-17 OSCAR 기준이며 실시간으로 변합니다 — 등록 직전 반드시 OSCAR에서 재확인하세요.</div>
+</div>
+
+<div class="card">
+  <h2><span class="n">05</span>계획 저장·불러오기</h2>
+  <div class="tools">
+    <button class="btn p" id="bsave">저장</button>
+    <button class="btn" id="bcopy">계획 복사</button>
+    <button class="btn" id="bload">붙여넣기로 불러오기</button>
+    <button class="btn" id="breset">전체 초기화</button>
+    <span class="mut3" id="savemsg" style="align-self:center"></span>
+  </div>
+  <textarea id="io" placeholder="여기에 계획 텍스트가 나타납니다. 다른 기기에서 쓰려면 이 내용을 복사해 두었다가 붙여넣고 불러오기를 누르세요."></textarea>
+</div>
+</div>
+<script>
+const COURSES=[{"code": "CS 6035", "name": "Introduction to Information Security", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.44, "diff": 2.58, "work": 10.7, "nrev": 495, "f26": {"crn": 84244, "left": 404, "total": 750, "wl": 0, "reserved": false}}, {"code": "CS 6150", "name": "Computing for Good", "pre": "CS", "cr": 3, "found": false, "ai": null, "rating": 2.5, "diff": 2.0, "work": 8.5, "nrev": 2, "f26": null}, {"code": "CS 6200", "name": "Graduate Introduction to Operating Systems", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.39, "diff": 3.69, "work": 18.5, "nrev": 385, "f26": {"crn": 85340, "left": 634, "total": 1150, "wl": 0, "reserved": false}}, {"code": "CS 6210", "name": "Advanced Operating Systems", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.01, "diff": 4.14, "work": 17.2, "nrev": 143, "f26": {"crn": 83927, "left": 109, "total": 475, "wl": 0, "reserved": false}}, {"code": "CS 6211", "name": "System Design for Cloud Computing", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.65, "diff": 4.59, "work": 28.4, "nrev": 17, "f26": {"crn": 89665, "left": 50, "total": 75, "wl": 0, "reserved": false}}, {"code": "CS 6238", "name": "Secure Computer Systems", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 2.9, "diff": 3.54, "work": 15.2, "nrev": 41, "f26": {"crn": 86006, "left": 89, "total": 100, "wl": 0, "reserved": false}}, {"code": "CS 6250", "name": "Computer Networks", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.47, "diff": 2.42, "work": 8.9, "nrev": 509, "f26": {"crn": 83928, "left": 29, "total": 700, "wl": 209, "reserved": true}}, {"code": "CS 6260", "name": "Applied Cryptography", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.43, "diff": 3.67, "work": 16.1, "nrev": 54, "f26": {"crn": 87076, "left": 131, "total": 150, "wl": 0, "reserved": false}}, {"code": "CS 6262", "name": "Network Security", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.14, "diff": 2.99, "work": 12.8, "nrev": 145, "f26": {"crn": 84604, "left": 168, "total": 300, "wl": 0, "reserved": false}}, {"code": "CS 6263", "name": "Intro to Cyber Physical Systems Security", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": null, "diff": null, "work": null, "nrev": null, "f26": {"crn": 85399, "left": 184, "total": 225, "wl": 0, "reserved": false}}, {"code": "CS 6264", "name": "Information Security Lab - Defenses", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 2.78, "diff": 3.56, "work": 21.1, "nrev": 9, "f26": {"crn": 87937, "left": 38, "total": 50, "wl": 0, "reserved": false}}, {"code": "CS 6265", "name": "Information Security Lab", "pre": "CS", "cr": 3, "found": false, "ai": null, "rating": 4.64, "diff": 4.25, "work": 26.6, "nrev": 28, "f26": {"crn": 86133, "left": 11, "total": 50, "wl": 0, "reserved": false}}, {"code": "CS 6290", "name": "High Performance Computer Architecture", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.82, "diff": 3.59, "work": 15.1, "nrev": 150, "f26": {"crn": 83931, "left": 8, "total": 300, "wl": 35, "reserved": true}}, {"code": "CS 6291", "name": "Embedded Systems Optimization", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.52, "diff": 3.57, "work": 15.7, "nrev": 49, "f26": {"crn": 85341, "left": 118, "total": 150, "wl": 0, "reserved": false}}, {"code": "CS 6300", "name": "Software Development Process", "pre": "CS", "cr": 3, "found": true, "ai": "algo", "rating": 3.55, "diff": 2.31, "work": 9.1, "nrev": 377, "f26": {"crn": 83929, "left": 1, "total": 1000, "wl": 912, "reserved": true}}, {"code": "CS 6310", "name": "Software Architecture and Design", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 2.94, "diff": 2.61, "work": 11.9, "nrev": 225, "f26": {"crn": 83932, "left": 402, "total": 600, "wl": 0, "reserved": false}}, {"code": "CS 6340", "name": "Software Analysis", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.55, "diff": 3.19, "work": 12.7, "nrev": 165, "f26": {"crn": 84600, "left": 239, "total": 400, "wl": 0, "reserved": false}}, {"code": "CS 6400", "name": "Database Systems Concepts and Design", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 2.61, "diff": 2.88, "work": 11.4, "nrev": 280, "f26": {"crn": 84601, "left": 528, "total": 700, "wl": 0, "reserved": false}}, {"code": "CS 6422", "name": "Database System Implementation", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 2.73, "diff": 3.09, "work": 13.0, "nrev": 11, "f26": {"crn": 93018, "left": 9, "total": 150, "wl": 31, "reserved": true}}, {"code": "CS 6435", "name": "Digital Health Equity", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.0, "diff": 2.0, "work": 10.0, "nrev": 1, "f26": {"crn": 91324, "left": 9, "total": 150, "wl": 68, "reserved": true}}, {"code": "CS 6440", "name": "Intro to Health Informatics", "pre": "CS", "cr": 3, "found": true, "ai": "elec", "rating": 2.73, "diff": 2.25, "work": 10.2, "nrev": 125, "f26": {"crn": 83933, "left": 20, "total": 450, "wl": 143, "reserved": true}}, {"code": "CS 6457", "name": "Video Game Design", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.16, "diff": 2.4, "work": 13.3, "nrev": 45, "f26": {"crn": 87367, "left": 306, "total": 500, "wl": 0, "reserved": false}}, {"code": "CS 6460", "name": "Educational Technology", "pre": "CS", "cr": 3, "found": true, "ai": "elec", "rating": 3.99, "diff": 2.8, "work": 14.4, "nrev": 107, "f26": {"crn": 84342, "left": 3, "total": 200, "wl": 0, "reserved": false}}, {"code": "CS 6475", "name": "Computational Photography", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.56, "diff": 3.24, "work": 16.9, "nrev": 189, "f26": {"crn": 84243, "left": 149, "total": 200, "wl": 0, "reserved": false}}, {"code": "CS 6476", "name": "Computer Vision", "pre": "CS", "cr": 3, "found": true, "ai": "core", "rating": 3.72, "diff": 4.09, "work": 21.7, "nrev": 214, "f26": {"crn": 84338, "left": 185, "total": 450, "wl": 0, "reserved": false}}, {"code": "CS 6491", "name": "Foundations of Computer Graphics", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.25, "diff": 2.5, "work": 10.2, "nrev": 4, "f26": {"crn": 93014, "left": 2, "total": 250, "wl": 7, "reserved": true}}, {"code": "CS 6515", "name": "Intro to Graduate Algorithms", "pre": "CS", "cr": 3, "found": true, "ai": "algo", "rating": 3.27, "diff": 4.05, "work": 19.2, "nrev": 523, "f26": {"crn": 86005, "left": 11, "total": 200, "wl": 521, "reserved": true}}, {"code": "CS 6601", "name": "Artificial Intelligence", "pre": "CS", "cr": 3, "found": true, "ai": "core", "rating": 4.03, "diff": 4.07, "work": 22.3, "nrev": 322, "f26": {"crn": 84602, "left": 467, "total": 1450, "wl": 0, "reserved": false}}, {"code": "CS 6603", "name": "AI, Ethics, and Society", "pre": "CS", "cr": 3, "found": true, "ai": "elec", "rating": 2.61, "diff": 1.56, "work": 6.6, "nrev": 133, "f26": {"crn": 87912, "left": 38, "total": 800, "wl": 626, "reserved": true}}, {"code": "CS 6675", "name": "Advanced Internet Systems", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 1.67, "diff": 4.0, "work": 13.3, "nrev": 3, "f26": {"crn": 88594, "left": 132, "total": 150, "wl": 0, "reserved": false}}, {"code": "CS 6747", "name": "Advanced Malware Analysis", "pre": "CS", "cr": 3, "found": false, "ai": null, "rating": null, "diff": null, "work": null, "nrev": null, "f26": {"crn": 87911, "left": 2, "total": 50, "wl": 8, "reserved": true}}, {"code": "CS 6750", "name": "Human-Computer Interaction", "pre": "CS", "cr": 3, "found": true, "ai": "elec", "rating": 4.04, "diff": 2.57, "work": 12.2, "nrev": 302, "f26": {"crn": 84732, "left": 695, "total": 1150, "wl": 0, "reserved": false}}, {"code": "CS 6795", "name": "Introduction to Cognitive Science", "pre": "CS", "cr": 3, "found": true, "ai": "elec", "rating": 3.86, "diff": 2.0, "work": 9.5, "nrev": 28, "f26": {"crn": 88593, "left": 8, "total": 750, "wl": 124, "reserved": true}}, {"code": "CS 7210", "name": "Distributed Computing", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.46, "diff": 4.57, "work": 46.6, "nrev": 54, "f26": {"crn": 87913, "left": 10, "total": 150, "wl": 22, "reserved": true}}, {"code": "CS 7280", "name": "Network Science", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.21, "diff": 2.94, "work": 13.2, "nrev": 66, "f26": {"crn": 87914, "left": 2, "total": 200, "wl": 10, "reserved": true}}, {"code": "CS 7295", "name": "GPU Hardware and Software", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 4.5, "diff": 3.0, "work": 12.5, "nrev": 4, "f26": {"crn": 94504, "left": 11, "total": 300, "wl": 81, "reserved": true}}, {"code": "CS 7400", "name": "Intro to Quantum Computing", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": null, "diff": null, "work": null, "nrev": null, "f26": {"crn": 91329, "left": 88, "total": 200, "wl": 0, "reserved": false}}, {"code": "CS 7470", "name": "Mobile & Ubiquitous Computing", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 2.03, "diff": 2.13, "work": 11.3, "nrev": 30, "f26": {"crn": 88595, "left": 15, "total": 300, "wl": 0, "reserved": false}}, {"code": "CS 7496", "name": "Computer Animation", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.25, "diff": 2.75, "work": 9.8, "nrev": 4, "f26": {"crn": 93015, "left": 62, "total": 150, "wl": 0, "reserved": false}}, {"code": "CS 7632", "name": "Game AI", "pre": "CS", "cr": 3, "found": true, "ai": "elec", "rating": 4.2, "diff": 2.78, "work": 11.3, "nrev": 54, "f26": {"crn": 87915, "left": 22, "total": 700, "wl": 167, "reserved": true}}, {"code": "CS 7637", "name": "Knowledge-Based AI", "pre": "CS", "cr": 3, "found": true, "ai": "core", "rating": 3.5, "diff": 3.05, "work": 14.1, "nrev": 374, "f26": {"crn": 83934, "left": 345, "total": 1250, "wl": 0, "reserved": false}}, {"code": "CS 7638", "name": "Robotics: AI Techniques", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.98, "diff": 2.98, "work": 12.9, "nrev": 341, "f26": {"crn": 86044, "left": 454, "total": 900, "wl": 0, "reserved": false}}, {"code": "CS 7639", "name": "Cyber-Physical Design and Analysis", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": null, "diff": null, "work": null, "nrev": null, "f26": {"crn": 85990, "left": 58, "total": 100, "wl": 0, "reserved": false}}, {"code": "CS 7641", "name": "Machine Learning", "pre": "CS", "cr": 3, "found": true, "ai": "core", "rating": 3.13, "diff": 4.15, "work": 22.4, "nrev": 530, "f26": {"crn": 83930, "left": 388, "total": 1450, "wl": 0, "reserved": false}}, {"code": "CS 7642", "name": "Reinforcement Learning", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.84, "diff": 4.21, "work": 22.4, "nrev": 231, "f26": {"crn": 87916, "left": 259, "total": 550, "wl": 0, "reserved": false}}, {"code": "CS 7643", "name": "Deep Learning", "pre": "CS", "cr": 3, "found": true, "ai": "core", "rating": 4.04, "diff": 4.07, "work": 19.2, "nrev": 122, "f26": {"crn": 87422, "left": 38, "total": 850, "wl": 0, "reserved": false}}, {"code": "CS 7646", "name": "Machine Learning for Trading", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": 3.86, "diff": 2.66, "work": 12.2, "nrev": 486, "f26": {"crn": 84716, "left": 1196, "total": 1700, "wl": 0, "reserved": false}}, {"code": "CS 7650", "name": "Natural Language", "pre": "CS", "cr": 3, "found": true, "ai": "core", "rating": 3.51, "diff": 3.11, "work": 11.0, "nrev": 55, "f26": {"crn": 89627, "left": 62, "total": 850, "wl": 703, "reserved": true}}, {"code": "CS 7711", "name": "Health Sensing and Interventions", "pre": "CS", "cr": 3, "found": true, "ai": null, "rating": null, "diff": null, "work": null, "nrev": null, "f26": null}, {"code": "CSE 6220", "name": "Intro to High-Performance Computing", "pre": "CSE", "cr": 3, "found": true, "ai": null, "rating": 4.2, "diff": 4.31, "work": 20.7, "nrev": 103, "f26": null}, {"code": "CSE 6242", "name": "Data and Visual Analytics", "pre": "CSE", "cr": 3, "found": true, "ai": null, "rating": 2.87, "diff": 3.21, "work": 15.8, "nrev": 304, "f26": null}, {"code": "CSE 6250", "name": "Big Data for Health Informatics", "pre": "CSE", "cr": 3, "found": true, "ai": null, "rating": 3.67, "diff": 4.11, "work": 26.9, "nrev": 84, "f26": null}, {"code": "ISYE 6420", "name": "Bayesian Statistics", "pre": "ISYE", "cr": 3, "found": true, "ai": null, "rating": 2.97, "diff": 3.31, "work": 12.9, "nrev": 91, "f26": null}, {"code": "ISYE 6501", "name": "Intro to Analytics Modeling", "pre": "ISYE", "cr": 3, "found": false, "ai": null, "rating": 4.1, "diff": 2.84, "work": 10.0, "nrev": 185, "f26": null}, {"code": "ISYE 6644", "name": "Simulation and Modeling", "pre": "ISYE", "cr": 3, "found": false, "ai": null, "rating": 4.26, "diff": 3.31, "work": 11.4, "nrev": 124, "f26": null}, {"code": "MGT 6311", "name": "Digital Marketing", "pre": "MGT", "cr": 3, "found": false, "ai": null, "rating": 4.04, "diff": 1.24, "work": 3.4, "nrev": 54, "f26": null}, {"code": "INTA 6450", "name": "Data Analytics & Security", "pre": "INTA", "cr": 3, "found": false, "ai": null, "rating": 2.26, "diff": 1.63, "work": 5.1, "nrev": 46, "f26": null}, {"code": "PUBP 6725", "name": "Information Security Policies", "pre": "PUBP", "cr": 3, "found": false, "ai": null, "rating": 3.0, "diff": 1.92, "work": 6.4, "nrev": 25, "f26": null}];
+const SEMS=[["f26","Fall 2026",1,2],["s27","Spring 2027",1,2],["u27","Summer 2027",1,1],
+["f27","Fall 2027",1,2],["s28","Spring 2028",1,2],["u28","Summer 2028",1,1],
+["f28","Fall 2028",0,2],["s29","Spring 2029",0,2]];
+const FOUND_WINDOW=["f26","s27","u27"];
+const BY={}; COURSES.forEach(c=>BY[c.code]=c);
+let plan={}; let filters={ai:0,found:0,open:0};
+
+async function load(){
+  try{const r=await window.storage.get('omscs-ai-plan'); if(r&&r.value) plan=JSON.parse(r.value);}catch(e){}
+  render();
+}
+async function save(){
+  try{await window.storage.set('omscs-ai-plan',JSON.stringify(plan)); msg('저장했습니다.');}
+  catch(e){ msg('이 환경에서는 자동 저장이 안 됩니다. "계획 복사"로 백업하세요.'); }
+}
+function msg(t){const e=document.getElementById('savemsg');e.textContent=t;setTimeout(()=>e.textContent='',3500);}
+
+function taken(){return Object.keys(plan);}
+function semOf(c){return plan[c];}
+function order(c){const i=SEMS.findIndex(s=>s[0]===plan[c]);return i<0?99:i;}
+
+function assign(){
+  const list=taken().sort((a,b)=>order(a)-order(b));
+  const A={algo:[],core:[],elec:[],free:[]};
+  const rest=[];
+  list.forEach(c=>{const r=BY[c]?BY[c].ai:null;
+    if(r==='algo'&&A.algo.length<1) A.algo.push(c);
+    else if(r==='core'&&A.core.length<2) A.core.push(c);
+    else if(r==='elec'&&A.elec.length<2) A.elec.push(c);
+    else rest.push(c);});
+  rest.forEach(c=>{const r=BY[c]?BY[c].ai:null;
+    if(r==='core'&&A.elec.length<2) A.elec.push(c); else A.free.push(c);});
+  return A;
+}
+
+function slotHTML(code,kind){
+  if(!code) return '<div class="slot"><span class="ph">'+kind+'</span></div>';
+  const c=BY[code];
+  return '<div class="slot filled'+(kind==='free'?' free':'')+'"><span class="cd">'+code+'</span><span class="nm">'+c.name+'</span></div>';
+}
+function fillRail(id,arr,n,ph){
+  let h='';
+  for(let i=0;i<n;i++) h+=slotHTML(arr[i],ph);
+  document.getElementById(id).innerHTML=h;
+}
+
+function seatBadge(c){
+  const f=c.f26;
+  if(!f) return '<span class="seat s-no">미개설</span>';
+  if(f.reserved) return '<span class="seat s-wl">대기 '+f.wl+'명</span>';
+  if(f.left<=15) return '<span class="seat s-low">'+f.left+'석</span>';
+  return '<span class="seat s-ok">'+f.left+'석</span>';
+}
+const ROLE={algo:['알고리즘','t-algo'],core:['코어','t-core'],elec:['선택','t-elec']};
+
+function render(){
+  const A=assign(), list=taken();
+  const cr=list.length*3;
+  const specN=A.algo.length+A.core.length+A.elec.length;
+  const foundIn=list.filter(c=>BY[c].found&&FOUND_WINDOW.includes(plan[c])).length;
+  const nonCS=list.filter(c=>BY[c].pre!=='CS'&&BY[c].pre!=='CSE').length*3;
+  const csCr=list.filter(c=>BY[c].pre==='CS'||BY[c].pre==='CSE').length*3;
+
+  fillRail('sl-algo',A.algo,1,'CS 6300 또는 CS 6515');
+  fillRail('sl-core',A.core,2,'AI 핵심 6과목 중 하나');
+  fillRail('sl-elec',A.elec,2,'AI 주변 7과목 중 하나');
+  fillRail('sl-free',A.free,5,'free');
+
+  document.getElementById('s1').textContent=cr;
+  document.getElementById('s2').textContent=list.length;
+  document.getElementById('s3').textContent=specN+'/5';
+  document.getElementById('s4').textContent=foundIn+'/2';
+
+  let grad='—';
+  if(list.length===10){ let last=-1; list.forEach(c=>{const i=SEMS.findIndex(s=>s[0]===plan[c]); if(i>last) last=i;});
+    if(last>=0) grad=SEMS[last][1]; }
+  document.getElementById('s5').textContent=grad;
+
+  const ok30=list.length===10, okSpec=A.algo.length===1&&A.core.length===2&&A.elec.length===2;
+  const okFound=foundIn>=2, okNon=nonCS<=6, ok24=csCr>=24;
+  const overCap=SEMS.filter(x=>list.filter(c=>plan[c]===x[0]).length>x[3]).map(x=>x[1]);
+  const okCap=overCap.length===0;
+  const f26=list.filter(c=>plan[c]==='f26');
+  const f26bad=f26.filter(c=>!BY[c].f26||BY[c].f26.reserved);
+  const okF26=f26.length>0&&f26bad.length===0;
+  const allOk=ok30&&okSpec&&okFound&&okNon&&ok24&&okCap;
+
+  const done=[ok30,okSpec,okFound,okNon,ok24,okCap].filter(Boolean).length;
+  document.getElementById('vbar').style.width=Math.round(list.length/10*100)+'%';
+  const dot=document.getElementById('vdot'), vt=document.getElementById('vtxt');
+  if(allOk){dot.style.background='#5DCAA5';vt.textContent='졸업 요건 전부 충족 — '+grad+' 졸업 가능';}
+  else if(list.length===0){dot.style.background='#8b95a1';vt.textContent='아직 과목을 담지 않았습니다';}
+  else {dot.style.background='#EF9F27';vt.textContent='요건 '+done+'/6 충족 — '+(10-list.length)+'과목 더 필요';}
+
+  const ck=[
+    [ok30,'총 30학점 · 10과목', cr+'학점 / 30학점'],
+    [okSpec,'AI specialization 15학점','알고리즘 '+A.algo.length+'/1 · 코어 '+A.core.length+'/2 · 선택 '+A.elec.length+'/2'],
+    [okFound,'Foundational 2과목 (1년 내)',foundIn+'/2 · Fall 2026~Summer 2027 안에 B 이상'],
+    [okNon,'CS·CSE 외 과목 6학점 이하',nonCS+'학점 / 최대 6학점'],
+    [ok24,'CS·CSE 6000+ 24학점 이상',csCr+'학점 / 24학점'],
+    [okCap,'학기당 수강 제한','Fall·Spring 최대 2과목 · Summer 최대 1과목'+(okCap?'':' · ⚠ 초과: '+overCap.join(', '))],
+    [okF26,'Fall 2026 실제 등록 가능', f26.length===0?'Fall 2026에 과목 없음':(f26bad.length?'⚠ '+f26bad.join(', ')+' 등록 불가/대기':f26.length+'과목 모두 자리 있음')]
+  ];
+  document.getElementById('checks').innerHTML=ck.map(([o,t,s],i)=>{
+    let cls=o?'on':((i===5||i===6)?'bad':'off'); if(i===6&&f26.length===0) cls='off';
+    return '<div class="chk '+cls+'"><span class="ic">'+(o?'✓':(cls==='bad'?'!':'·'))+'</span><span><b>'+t+'</b><small>'+s+'</small></span></div>';
+  }).join('');
+
+  document.getElementById('sems').innerHTML=SEMS.map(([id,label,goal])=>{
+    const cs=list.filter(c=>plan[c]===id);
+    const w=cs.reduce((a,c)=>a+(BY[c].work||12),0);
+    const hot=w>32; const cap=SEMS.find(x=>x[0]===id)[3]; const over=cs.length>cap;
+    return '<div class="sem'+(goal?' goal':' over')+(over?' cap':'')+'"><h4>'+label+
+      '<span class="'+(over?'capbad':'mut3')+'">'+cs.length+'/'+cap+'과목</span></h4>'+
+      '<div class="load'+(hot||over?' hot':'')+'">'+(over?'⚠ 한도 초과 — 등록 불가':(cs.length?'주당 약 '+w.toFixed(0)+'시간'+(hot?' ⚠ 과부하':''):'비어 있음'))+'</div>'+
+      cs.map(c=>{const r=BY[c].ai; const tg=r?ROLE[r]:null;
+        const A2=assign(); const isFree=A2.free.includes(c);
+        const t=isFree?['자유','t-free']:(tg||['자유','t-free']);
+        return '<div class="pill"><span class="cd">'+c+'</span><span class="tag '+t[1]+'">'+t[0]+'</span><button class="x" data-rm="'+c+'" aria-label="제거">×</button></div>';}).join('')+
+      '</div>';
+  }).join('');
+
+  let rows=COURSES.slice();
+  const q=document.getElementById('q').value.toLowerCase().trim();
+  if(q) rows=rows.filter(c=>(c.code+' '+c.name).toLowerCase().includes(q));
+  if(filters.ai) rows=rows.filter(c=>c.ai);
+  if(filters.found) rows=rows.filter(c=>c.found);
+  if(filters.open) rows=rows.filter(c=>c.f26&&!c.f26.reserved);
+  const s=document.getElementById('sort').value;
+  const nz=(v,d)=>v==null?d:v;
+  rows.sort((a,b)=>s==='diff'?nz(a.diff,9)-nz(b.diff,9):s==='work'?nz(a.work,99)-nz(b.work,99):
+    s==='rating'?nz(b.rating,-1)-nz(a.rating,-1):s==='seat'?((b.f26&&!b.f26.reserved?b.f26.left:-1)-(a.f26&&!a.f26.reserved?a.f26.left:-1)):a.code.localeCompare(b.code));
+
+  document.getElementById('tb').innerHTML=rows.map(c=>{
+    const inPlan=plan[c.code];
+    const tg=c.ai?ROLE[c.ai]:null;
+    const dw=c.diff?Math.round(c.diff/5*46):0;
+    return '<tr class="'+(inPlan?'taken':'')+'">'+
+      '<td class="mono" style="font-weight:700;white-space:nowrap">'+c.code+'</td>'+
+      '<td>'+c.name+'</td>'+
+      '<td class="c">'+(c.found?'<span class="tag" style="background:var(--okbg);color:var(--ok)">★</span>':'<span class="mut3">–</span>')+'</td>'+
+      '<td class="c">'+(tg?'<span class="tag '+tg[1]+'">'+tg[0]+'</span>':'<span class="mut3">자유</span>')+'</td>'+
+      '<td class="c mono" style="font-size:11.5px">'+(c.diff?c.diff.toFixed(2)+'<br><span class="dfill" style="width:'+dw+'px"></span>':'<span class="mut3">–</span>')+'</td>'+
+      '<td class="c mono" style="font-size:11.5px">'+(c.work?c.work+'h':'<span class="mut3">–</span>')+'</td>'+
+      '<td class="c mono" style="font-size:11.5px">'+(c.rating?c.rating.toFixed(2):'<span class="mut3">–</span>')+'</td>'+
+      '<td class="c">'+seatBadge(c)+'</td>'+
+      '<td class="c mono" style="font-size:11px">'+(c.f26?c.f26.crn:'<span class="mut3">–</span>')+'</td>'+
+      '<td><select class="addsel" data-add="'+c.code+'"><option value="">'+(inPlan?'담김 · 변경':'+ 학기 선택')+'</option>'+
+        SEMS.map(([id,l])=>'<option value="'+id+'"'+(inPlan===id?' selected':'')+'>'+l+'</option>').join('')+
+        (inPlan?'<option value="__rm">✕ 빼기</option>':'')+'</select></td></tr>';
+  }).join('');
+}
+
+document.addEventListener('change',e=>{
+  const a=e.target.dataset.add;
+  if(a){ const v=e.target.value; if(v==='__rm') delete plan[a]; else if(v) plan[a]=v; render(); save(); }
+  if(e.target.id==='sort') render();
+});
+document.addEventListener('click',e=>{
+  const rm=e.target.dataset.rm; if(rm){delete plan[rm];render();save();}
+  const f=e.target.dataset.f;
+  if(f){ filters[f]=filters[f]?0:1; e.target.classList.toggle('on'); render(); }
+});
+document.getElementById('q').addEventListener('input',render);
+document.getElementById('bsave').onclick=save;
+document.getElementById('bcopy').onclick=()=>{
+  const t=Object.entries(plan).map(([c,s])=>c+' @ '+s).join('\n');
+  document.getElementById('io').value=t; msg('아래 칸의 내용을 복사해 두세요.');
+};
+document.getElementById('bload').onclick=()=>{
+  const t=document.getElementById('io').value.trim();
+  if(!t){msg('붙여넣을 내용이 없습니다.');return;}
+  const p={}; let bad=0;
+  t.split('\n').forEach(l=>{const m=l.split('@'); if(m.length===2){const c=m[0].trim(),s=m[1].trim();
+    if(BY[c]&&SEMS.some(x=>x[0]===s)) p[c]=s; else bad++;}});
+  if(!Object.keys(p).length){msg('형식을 읽지 못했습니다. "CS 6035 @ f26" 형태여야 합니다.');return;}
+  plan=p; render(); save(); msg('불러왔습니다.'+(bad?' ('+bad+'줄 건너뜀)':''));
+};
+document.getElementById('breset').onclick=()=>{plan={};render();save();msg('초기화했습니다.');};
+load();
+</script>

@@ -1,0 +1,1765 @@
+{
+ "artificial-intelligence-formerly-interactive-intelligence": {
+  "title": "Specialization in Artificial Intelligence (formerly Interactive Intelligence)",
+  "file": "specialization-artificial-intelligence-formerly-interactive-intelligence.html",
+  "specHours": 15,
+  "sections": [
+   {
+    "name": "Core Courses",
+    "hours": 9,
+    "groups": [
+     {
+      "need": 1,
+      "label": "Algorithms and Design: Take one (1) course from:",
+      "items": [
+       {
+        "codes": [
+         "CSE 6140"
+        ],
+        "text": "CSE 6140 Computational Science and Engineering Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6300"
+        ],
+        "text": "CS 6300 Software Development Process",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6301"
+        ],
+        "text": "CS 6301 Advanced Topics in Software Engineering",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6505"
+        ],
+        "text": "CS 6505 Computability, Complexity, and Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6515"
+        ],
+        "text": "CS 6515 Introduction to Graduate Algorithms",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     },
+     {
+      "need": 2,
+      "label": "And, two (2) courses from:",
+      "items": [
+       {
+        "codes": [
+         "CS 6476"
+        ],
+        "text": "CS 6476: Computer Vision",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6601"
+        ],
+        "text": "CS 6601 Artificial Intelligence",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7637"
+        ],
+        "text": "CS 7637 Knowledge-Based AI",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7641"
+        ],
+        "text": "CS 7641 Machine Learning",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7643"
+        ],
+        "text": "CS 7643: Deep Learning",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7650"
+        ],
+        "text": "CS 7650: Natural Language",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Electives",
+    "hours": 6,
+    "groups": [
+     {
+      "need": 2,
+      "label": "Pick two (2) courses from:",
+      "items": [
+       {
+        "codes": [
+         "CS 6604"
+        ],
+        "text": "CS 6604 Conversational AI",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7476"
+        ],
+        "text": "CS 7476 Advanced Computer Vision",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7631"
+        ],
+        "text": "CS 7631 Multi-Robot Systems",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7632"
+        ],
+        "text": "CS 7632 Game AI",
+        "offered": true,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7633"
+        ],
+        "text": "CS 7633 Human-Robot Interaction",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7634"
+        ],
+        "text": "CS 7634 AI Storytelling in Virtual Worlds",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7647"
+        ],
+        "text": "CS 7647 Machine Learning with Limited Supervision",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 7652"
+        ],
+        "text": "CS 7652 Large Language Models",
+        "offered": false,
+        "sub": "AI Methods"
+       },
+       {
+        "codes": [
+         "CS 6440"
+        ],
+        "text": "CS 6440: Introduction to Health Informatics",
+        "offered": true,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       },
+       {
+        "codes": [
+         "CS 6460"
+        ],
+        "text": "CS 6460: Educational Technology",
+        "offered": true,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       },
+       {
+        "codes": [
+         "CS 6603",
+         "CS 8803 O10"
+        ],
+        "text": "CS 6603: AI, Ethics, and Society (formerly CS 8803 O10)",
+        "offered": true,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       },
+       {
+        "codes": [
+         "CS 6750"
+        ],
+        "text": "CS 6750: Human-Computer Interaction",
+        "offered": true,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       },
+       {
+        "codes": [
+         "CS 6795"
+        ],
+        "text": "CS 6795 Introduction to Cognitive Science",
+        "offered": true,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       },
+       {
+        "codes": [
+         "CS 7610"
+        ],
+        "text": "CS 7610 Modeling and Design",
+        "offered": false,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       },
+       {
+        "codes": [
+         "CS 7651"
+        ],
+        "text": "CS 7651 Human and Machine Learning",
+        "offered": false,
+        "sub": "Cognition, Ethics, and Human-Centered AI"
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Free Electives",
+    "hours": 15,
+    "groups": []
+   }
+  ]
+ },
+ "computational-perception-and-robotics": {
+  "title": "Specialization in Computational Perception and Robotics",
+  "file": "specialization-computational-perception-and-robotics.html",
+  "specHours": 15,
+  "sections": [
+   {
+    "name": "Core Courses",
+    "hours": 6,
+    "groups": [
+     {
+      "need": 1,
+      "label": "Algorithms: Pick one (1) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6505"
+        ],
+        "text": "CS 6505 Computability, Algorithms, and Complexity",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6515"
+        ],
+        "text": "CS 6515 Introduction to Graduate Algorithms",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6520"
+        ],
+        "text": "CS 6520 Computational Complexity Theory",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6550"
+        ],
+        "text": "CS 6550 Design and Analysis of Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7520"
+        ],
+        "text": "CS 7520 Approximation Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7530"
+        ],
+        "text": "CS 7530 Randomized Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6140"
+        ],
+        "text": "CSE 6140 Computational Science and Engineering Algorithms",
+        "offered": false,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     },
+     {
+      "need": 1,
+      "label": "And, pick one (1) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6601"
+        ],
+        "text": "CS 6601 Artificial Intelligence",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7641"
+        ],
+        "text": "CS 7641 Machine Learning",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Electives",
+    "hours": 9,
+    "groups": [
+     {
+      "need": 3,
+      "label": "Pick three (3) courses from Perception and Robotics, with at least one (1) course from each.",
+      "items": [
+       {
+        "codes": [
+         "CS 6475"
+        ],
+        "text": "CS 6475 Computational Photography",
+        "offered": true,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 6476"
+        ],
+        "text": "CS 6476 Computer Vision",
+        "offered": true,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7499"
+        ],
+        "text": "CS 7499 3D Reconstruction",
+        "offered": false,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7636"
+        ],
+        "text": "CS 7636 Computational Perception",
+        "offered": false,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7639"
+        ],
+        "text": "CS 7639 Cyber Physical Design and Analysis",
+        "offered": true,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7644"
+        ],
+        "text": "CS 7644 Machine Learning for Robotics",
+        "offered": false,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7650"
+        ],
+        "text": "CS 7650 Natural Language",
+        "offered": true,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7711",
+         "CS 8803 O29"
+        ],
+        "text": "CS 7711: Health Sensing and Interventions (formerly CS 8803 O29)",
+        "offered": true,
+        "sub": "Perception"
+       },
+       {
+        "codes": [
+         "CS 7630"
+        ],
+        "text": "CS 7630 Autonomous Robotics",
+        "offered": false,
+        "sub": "Robotics"
+       },
+       {
+        "codes": [
+         "CS 7631"
+        ],
+        "text": "CS 7631 Autonomous Multi-Robot Systems",
+        "offered": false,
+        "sub": "Robotics"
+       },
+       {
+        "codes": [
+         "CS 7633"
+        ],
+        "text": "CS 7633 Human-Robot Interaction",
+        "offered": false,
+        "sub": "Robotics"
+       },
+       {
+        "codes": [
+         "CS 7638"
+        ],
+        "text": "CS 7638 Artificial Intelligence Techniques for Robotics",
+        "offered": true,
+        "sub": "Robotics"
+       },
+       {
+        "codes": [
+         "CS 7648"
+        ],
+        "text": "CS 7648 Interactive Robot Learning",
+        "offered": false,
+        "sub": "Robotics"
+       },
+       {
+        "codes": [
+         "CS 7649"
+        ],
+        "text": "CS 7649 Robot Intelligence: Planning",
+        "offered": false,
+        "sub": "Robotics"
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Free Electives",
+    "hours": 15,
+    "groups": []
+   }
+  ]
+ },
+ "computer-graphics": {
+  "title": "Specialization in Computer Graphics",
+  "file": "specialization-computer-graphics.html",
+  "specHours": 15,
+  "sections": [
+   {
+    "name": "Core Courses",
+    "hours": 6,
+    "groups": [
+     {
+      "need": 1,
+      "label": "Pick one (1) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6457"
+        ],
+        "text": "CS 6457 Video Game Design",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6491"
+        ],
+        "text": "CS 6491 Foundations of Computer Graphics",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7496"
+        ],
+        "text": "CS 7496 Computer Animation",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     },
+     {
+      "need": 1,
+      "label": "And pick one (1) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6505"
+        ],
+        "text": "CS 6505 Computability, Algorithms, and Complexity",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6515"
+        ],
+        "text": "CS 6515 Introduction to Graduate Algorithms",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Electives",
+    "hours": 9,
+    "groups": [
+     {
+      "need": 3,
+      "label": "Pick three (3) from:",
+      "items": [
+       {
+        "codes": [
+         "CS 6457"
+        ],
+        "text": "CS 6457 Video Game Design",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6475"
+        ],
+        "text": "CS 6475 Computational Photography",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6476"
+        ],
+        "text": "CS 6476 Computer Vision",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6491"
+        ],
+        "text": "CS 6491 Foundations of Computer Graphics",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6492"
+        ],
+        "text": "CS 6492 Shape Grammars",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6730"
+        ],
+        "text": "CS 6730 Data Visualization Principles",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7450"
+        ],
+        "text": "CS 7450 Information Visualization",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7496"
+        ],
+        "text": "CS 7496 Computer Animation",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Free Electives",
+    "hours": 15,
+    "groups": []
+   }
+  ]
+ },
+ "computing-systems": {
+  "title": "Specialization in Computing Systems",
+  "file": "specialization-computing-systems.html",
+  "specHours": 18,
+  "sections": [
+   {
+    "name": "Core Courses",
+    "hours": 9,
+    "groups": [
+     {
+      "need": null,
+      "label": "(implicit)",
+      "items": [
+       {
+        "codes": [
+         "CS 6505"
+        ],
+        "text": "CS 6505 Computability, Algorithms, and Complexity",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6515"
+        ],
+        "text": "CS 6515 Introduction to Graduate Algorithms",
+        "offered": true,
+        "sub": "or"
+       }
+      ],
+      "sub": {}
+     },
+     {
+      "need": 2,
+      "label": "And, pick two (2) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6210"
+        ],
+        "text": "CS 6210 Advanced Operating Systems",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6241"
+        ],
+        "text": "CS 6241 Compiler Design",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6250"
+        ],
+        "text": "CS 6250 Computer Networks",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6290"
+        ],
+        "text": "CS 6290 High-Performance Computer Architecture",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6300",
+         "CS 6301"
+        ],
+        "text": "CS 6300 Software Development Process or CS 6301 Advanced Topics in Software Engineering",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6390"
+        ],
+        "text": "CS 6390 Programming Languages",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6400"
+        ],
+        "text": "CS 6400 Database Systems Concepts and Design",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [],
+        "text": "Any Core Courses in excess of the 9 hour requirement may be used as Computing Systems Electives",
+        "offered": false,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Electives",
+    "hours": 9,
+    "groups": [
+     {
+      "need": 3,
+      "label": "Pick three (3) courses from:",
+      "items": [
+       {
+        "codes": [
+         "CS 6035"
+        ],
+        "text": "CS 6035 Introduction to Information Security",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6200"
+        ],
+        "text": "CS 6200 Graduate Introduction to Operating Systems",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6211",
+         "CS 8803 O12"
+        ],
+        "text": "CS 6211: System Design for Cloud Computing (formerly CS 8803 O12)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6220"
+        ],
+        "text": "CS 6220 Big Data Systems and Analytics",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6222"
+        ],
+        "text": "CS 6222 Machine Learning Systems",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6235"
+        ],
+        "text": "CS 6235 Real Time Systems",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6238"
+        ],
+        "text": "CS 6238 Secure Computer Systems",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6239"
+        ],
+        "text": "CS 6239 Enterprise Cybersecurity Management",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6245"
+        ],
+        "text": "CS 6245 Parallelizing Compilers",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6260"
+        ],
+        "text": "CS 6260 Applied Cryptography",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6261",
+         "CS 8803 O22"
+        ],
+        "text": "CS 6261: Security Operations and Incident Response (formerly CS 8803 O22)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6262"
+        ],
+        "text": "CS 6262 Network Security",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6263"
+        ],
+        "text": "CS 6263 Intro to Cyber Physical Systems Security",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6267"
+        ],
+        "text": "CS 6267 Critical Infrastructures Security and Resilience",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6268"
+        ],
+        "text": "CS 6268 Psychology of Cybersecurity",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6270"
+        ],
+        "text": "CS 6270 Technical Introduction to Blockchain and Cryptocurrency",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6291"
+        ],
+        "text": "CS 6291 Embedded Systems Optimization",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6310"
+        ],
+        "text": "CS 6310 Software Architecture and Design",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6340"
+        ],
+        "text": "CS 6340 Software Analysis and Testing",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6365"
+        ],
+        "text": "CS 6365 Introduction to Enterprise Computing",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6422"
+        ],
+        "text": "CS 6422 Database System Implementation",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6423"
+        ],
+        "text": "CS 6423 Advanced Database System Implementation",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6550"
+        ],
+        "text": "CS 6550 Design and Analysis of Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6675"
+        ],
+        "text": "CS 6675 Advanced Internet Computing Systems and Applications",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6747",
+         "CS 8813"
+        ],
+        "text": "CS 6747: Advanced Malware Analysis (formerly CS 8813)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7210"
+        ],
+        "text": "CS 7210 Distributed Computing",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7260"
+        ],
+        "text": "CS 7260 Internetworking Architectures and Protocols",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7263"
+        ],
+        "text": "CS 7263 Advanced Topics in Network Security and Measurement",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7270"
+        ],
+        "text": "CS 7270 Networked Applications and Services",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7280"
+        ],
+        "text": "CS 7280 Network Science",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7290"
+        ],
+        "text": "CS 7290 Advanced Topics in Microarchitecture",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7292"
+        ],
+        "text": "CS 7292 Reliability and Security in Computer Architecture",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7295",
+         "CS 8803 O21"
+        ],
+        "text": "CS 7295: GPU Hardware and Software (formerly CS 8803 O21)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7400",
+         "CS 8803 O13"
+        ],
+        "text": "CS 7400: Intro to Quantum Computing (formerly CS 8803 O13)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7560"
+        ],
+        "text": "CS 7560 Theory of Cryptography",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 8803 FPL"
+        ],
+        "text": "CS 8803-FPL Special Topics: Foundations of Programming Languages",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6220"
+        ],
+        "text": "CSE 6220 High-Performance Computing",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 8803",
+         "CS 6264",
+         "CS 8803 O11"
+        ],
+        "text": "Any Special Topics (CS 8803) course that is being taught by a School of Computer Science faculty member may also count as a Computing Systems elective. The definition of \"School of Computer Science faculty member\" is a faculty member who appears on the School of Computer Science website: https://scs.gatech.edu/people/faculty . The current applicable OMSCS courses are: CS 6264: Information Security Lab - System and Network Defenses (formerly CS 8803 O11)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 8803 O08"
+        ],
+        "text": "CS 8803-O08: Compilers - Theory and Practice",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Free Electives",
+    "hours": 12,
+    "groups": []
+   }
+  ]
+ },
+ "human-computer-interaction": {
+  "title": "Specialization in Human-Computer Interaction",
+  "file": "specialization-human-computer-interaction.html",
+  "specHours": 15,
+  "sections": [
+   {
+    "name": "Core Courses",
+    "hours": 6,
+    "groups": [
+     {
+      "need": null,
+      "label": "(implicit)",
+      "items": [
+       {
+        "codes": [
+         "CS 6456",
+         "CS 7470"
+        ],
+        "text": "CS 6456 Principles of User Interface Software OR CS 7470 Mobile and Ubiquitous Computing",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6750"
+        ],
+        "text": "CS 6750 Human-Computer Interaction",
+        "offered": true,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Electives",
+    "hours": 9,
+    "groups": [
+     {
+      "need": 3,
+      "label": "Pick three (3) courses from the two sub-areas below, including at least one from each sub-area:",
+      "items": [
+       {
+        "codes": [
+         "CS 6010"
+        ],
+        "text": "CS 6010 Principles of Design",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6320"
+        ],
+        "text": "CS 6320 Software Requirements Analysis and Specification",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6435"
+        ],
+        "text": "CS 6435 Digital Health Equity",
+        "offered": true,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6454"
+        ],
+        "text": "CS 6454 Qualitative Methods for Design of Human Computer Interaction",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6457"
+        ],
+        "text": "CS 6457 Video Game Design",
+        "offered": true,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6460"
+        ],
+        "text": "CS 6460 Educational Technology: Conceptual Foundations",
+        "offered": true,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6465"
+        ],
+        "text": "CS 6465 Computational Journalism",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6470"
+        ],
+        "text": "CS 6470 Design of Online Communities",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6795"
+        ],
+        "text": "CS 6795 Introduction to Cognitive Science",
+        "offered": true,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 7465"
+        ],
+        "text": "CS 7465 Educational Technology: Design and Evaluation",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 7467"
+        ],
+        "text": "CS 7467 Computer-Supported Collaborative Learning",
+        "offered": false,
+        "sub": "Design and evaluation concepts"
+       },
+       {
+        "codes": [
+         "CS 6440"
+        ],
+        "text": "CS 6440 Introduction to Health Informatics",
+        "offered": true,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6452"
+        ],
+        "text": "CS 6452 Prototyping Interactive Systems",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6456"
+        ],
+        "text": "CS 6456 Principles of User Interface Software",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6641"
+        ],
+        "text": "CS 6641 Personal Health Informatics",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6730"
+        ],
+        "text": "CS 6730 Data Visualization: Principles and Applications",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6745"
+        ],
+        "text": "CS 6745 Information & Communication Technologies and Global Development",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6763"
+        ],
+        "text": "CS 6763 Design of Design Environments",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 6770"
+        ],
+        "text": "CS 6770 Mixed Reality Experience Design",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7450"
+        ],
+        "text": "CS 7450 Information Visualization",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7451"
+        ],
+        "text": "CS 7451 Human-Centered Data Analysis",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7460"
+        ],
+        "text": "CS 7460 Collaborative Computing",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7462"
+        ],
+        "text": "CS 7462 Animal Computer Interaction",
+        "offered": false,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7470"
+        ],
+        "text": "CS 7470 Mobile and Ubiquitous Computing",
+        "offered": true,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7632"
+        ],
+        "text": "CS 7632 Game AI",
+        "offered": true,
+        "sub": "Interactive technology"
+       },
+       {
+        "codes": [
+         "CS 7711",
+         "CS 8803 O29"
+        ],
+        "text": "CS 7711: Health Sensing and Interventions (formerly CS 8803 O29)",
+        "offered": true,
+        "sub": "Interactive technology"
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Free Electives",
+    "hours": 15,
+    "groups": []
+   }
+  ]
+ },
+ "machine-learning": {
+  "title": "Specialization in Machine Learning",
+  "file": "specialization-machine-learning.html",
+  "specHours": 15,
+  "sections": [
+   {
+    "name": "Core Courses",
+    "hours": 6,
+    "groups": [
+     {
+      "need": 1,
+      "label": "Algorithms: Pick one (1) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6505"
+        ],
+        "text": "CS 6505 Computability, Algorithms, and Complexity",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6515"
+        ],
+        "text": "CS 6515 Introduction to Graduate Algorithms",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6520"
+        ],
+        "text": "CS 6520 Computational Complexity Theory",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6550"
+        ],
+        "text": "CS 6550 Design and Analysis of Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7510"
+        ],
+        "text": "CS 7510 Graph Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7520"
+        ],
+        "text": "CS 7520 Approximation Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7530"
+        ],
+        "text": "CS 7530 Randomized Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6140"
+        ],
+        "text": "CSE 6140 Computational Science and Engineering Algorithms",
+        "offered": false,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     },
+     {
+      "need": 1,
+      "label": "And, pick one (1) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 7641"
+        ],
+        "text": "CS 7641 Machine Learning",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6740"
+        ],
+        "text": "CSE 6740 Computational Data Analysis: Learning, Mining, and Computation",
+        "offered": false,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Electives",
+    "hours": 9,
+    "groups": [
+     {
+      "need": 3,
+      "label": "Pick three (3) of:",
+      "items": [
+       {
+        "codes": [
+         "CS 6220"
+        ],
+        "text": "CS 6220 Big Data Systems & Analysis",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6222"
+        ],
+        "text": "CS 6222 Machine Learning Systems",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6471"
+        ],
+        "text": "CS 6471 Computational Social Science",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6476"
+        ],
+        "text": "CS 6476 Computer Vision",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6601"
+        ],
+        "text": "CS 6601: Artificial Intelligence",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6603"
+        ],
+        "text": "CS 6603 AI, Ethics, and Society",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 6604"
+        ],
+        "text": "CS 6604 Conversational Artificial Intelligence",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7280"
+        ],
+        "text": "CS 7280 Network Science",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7476"
+        ],
+        "text": "CS 7476 Advanced Computer Vision",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7535"
+        ],
+        "text": "CS 7535 Markov Chain Monte Carlo",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7540"
+        ],
+        "text": "CS 7540 Spectral Algorithms",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7545"
+        ],
+        "text": "CS 7545 Machine Learning Theory",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7616"
+        ],
+        "text": "CS 7616 Pattern Recognition",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7626"
+        ],
+        "text": "CS 7626 Behavioral Imaging",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7632"
+        ],
+        "text": "CS 7632: Game AI",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7634"
+        ],
+        "text": "CS 7634 AI Storytelling in Virtual Worlds",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7637"
+        ],
+        "text": "CS 7637: Knowledge-Based AI",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7642",
+         "CS 8803 O03"
+        ],
+        "text": "CS 7642 Reinforcement Learning and Decision Making ( Formerly CS 8803-O03)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7643"
+        ],
+        "text": "CS 7643 Deep Learning",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7644"
+        ],
+        "text": "CS 7644 Machine Learning for Robotics",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7646"
+        ],
+        "text": "CS 7646 Machine Learning for Trading",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7647"
+        ],
+        "text": "CS 7647 Machine Learning with Limited Supervision",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7648"
+        ],
+        "text": "CS 7648 Interactive Robot Learning",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7649"
+        ],
+        "text": "CS 7649 Robot Intelligence: Planning",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7650"
+        ],
+        "text": "CS 7650 Natural Language",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7651"
+        ],
+        "text": "CS 7651 Human and Machine Learning",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 7652"
+        ],
+        "text": "CS 7652 Large Language Models",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CS 8803"
+        ],
+        "text": "CS 8803 Special Topics: Probabilistic Graph Models",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6240"
+        ],
+        "text": "CSE 6240 Web Search and Text Mining",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6242"
+        ],
+        "text": "CSE 6242 Data and Visual Analytics",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6243"
+        ],
+        "text": "CSE 6243 Advanced Topics in Machine Learning",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 6250",
+         "CSE 8803"
+        ],
+        "text": "CSE 6250 Big Data for Health (formerly CSE 8803)",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 7752"
+        ],
+        "text": "CSE 7752 Scientific Machine Learning",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "CSE 7850"
+        ],
+        "text": "CSE 7850 Machine Learning in Computational Biology",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "ISYE 6416"
+        ],
+        "text": "ISYE 6416 Computational Statistics",
+        "offered": false,
+        "sub": null
+       },
+       {
+        "codes": [
+         "ISYE 6420"
+        ],
+        "text": "ISYE 6420 Bayesian Methods",
+        "offered": true,
+        "sub": null
+       },
+       {
+        "codes": [
+         "ISYE 6664"
+        ],
+        "text": "ISYE 6664 Stochastic Optimization",
+        "offered": false,
+        "sub": null
+       }
+      ],
+      "sub": {}
+     }
+    ]
+   },
+   {
+    "name": "Free Electives",
+    "hours": 15,
+    "groups": []
+   }
+  ]
+ }
+}

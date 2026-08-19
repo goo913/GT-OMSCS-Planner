@@ -1,0 +1,97 @@
+{
+ "version": "2026.08.19",
+ "generatedAt": "2026-08-19T14:51:44Z",
+ "registrarUrl": "https://registrar.gatech.edu/calendar",
+ "terms": {
+  "2026FA": {
+   "source": "Fall 2026 OMSCS Orientation Document",
+   "sourceUrl": "https://omscs.gatech.edu/sites/default/files/documents/Orientation%20Documents/Fall%202026%20Orientation%20Document.pdf",
+   "dates": [
+    {
+     "date": "2026-08-13",
+     "label": "Registration time tickets available",
+     "note": "6:00pm ET"
+    },
+    {
+     "date": "2026-08-17",
+     "label": "Registration opens",
+     "note": "through Aug 28"
+    },
+    {
+     "date": "2026-08-24",
+     "label": "First day of class"
+    },
+    {
+     "date": "2026-08-28",
+     "label": "Last day to register / drop without a W",
+     "kind": "deadline"
+    },
+    {
+     "date": "2026-08-31",
+     "label": "Tuition and fee payment deadline",
+     "kind": "payment",
+     "note": "4:00pm ET"
+    },
+    {
+     "date": "2026-09-07",
+     "label": "Labor Day — Institute holiday"
+    },
+    {
+     "date": "2026-10-05",
+     "label": "Fall Break",
+     "note": "Oct 5–6"
+    },
+    {
+     "date": "2026-10-31",
+     "label": "Last day to withdraw with a W",
+     "kind": "deadline"
+    },
+    {
+     "date": "2026-11-02",
+     "label": "Grade substitution deadline",
+     "kind": "deadline"
+    },
+    {
+     "date": "2026-11-25",
+     "label": "Student Recess Day"
+    },
+    {
+     "date": "2026-11-26",
+     "label": "Thanksgiving Break",
+     "note": "Nov 26–27"
+    },
+    {
+     "date": "2026-12-10",
+     "label": "Final exams",
+     "note": "Dec 10–17"
+    },
+    {
+     "date": "2026-12-17",
+     "label": "End of term"
+    },
+    {
+     "date": "2026-12-22",
+     "label": "Grades available",
+     "note": "after 6:00pm ET"
+    }
+   ]
+  }
+ },
+ "graduationApplicationDeadlines": [
+  {
+   "term": "SP",
+   "label": "Spring graduation",
+   "deadline": "October 15"
+  },
+  {
+   "term": "SU",
+   "label": "Summer graduation",
+   "deadline": "March 15"
+  },
+  {
+   "term": "FA",
+   "label": "Fall graduation",
+   "deadline": "June 1"
+  }
+ ]
+}

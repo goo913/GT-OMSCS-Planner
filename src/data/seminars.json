@@ -1,0 +1,467 @@
+{
+ "version": "2026.08.19",
+ "generatedAt": "2026-08-19T14:51:44Z",
+ "source": "https://omscs.gatech.edu/seminars",
+ "seminars": [
+  {
+   "code": "CS 8001 OAH",
+   "title": "Optimization Algorithms in Hardware",
+   "schedule": "Fall 2026",
+   "lastOffered": "",
+   "description": "This seminar provides an overview of optimization algorithms and the hardware built to run them. Optimization searches for the extreme values of an objective function whose variables may be continuous or discrete. This seminar focuses on the discrete case through three classic problems: Boolean satisfiability (SAT), maximum cut (MAX-CUT), and the traveling salesman problem (TSP). These problems appear in many practical applications, including task scheduling, physical simulations, and circuit layout. The seminar covers key algorithmic concepts: branch-and-bound, local search, and annealing. It also covers specialized hardware accelerators: custom chips, analog circuits, and quantum machines. Through discussions, students come away with a picture of the main algorithmic and hardware approaches to these problems and the ideas behind them.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OCS",
+   "title": "Computing in Python",
+   "schedule": "Every Spring, Summer, and Fall",
+   "lastOffered": "",
+   "description": "This seminar is combined with David Joyner's online undergraduate CS1301 class and serves as a primer on computing in Python. It is an introductory course that presupposes no prior CS knowledge, but for OMSCS students without prior Python experience specifically it has served as a good, low-stakes primer in the past.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OCT",
+   "title": "Collaborative Team Skills for Software Development",
+   "schedule": "Every Spring, Summer, and Fall",
+   "lastOffered": "",
+   "description": "This seminar provides a research-driven perspective on the practical aspects of team collaboration. Both in OMSCS and in your career, you will work (or have worked) on teams. These are either formed by someone else or by you. Both scenarios benefit from mastering a unique skill set to deliver successful solutions to stakeholders. By the end of this course, you'll add to your current skillset by refining skills to handle a team member who is not performing, craft a malleable team hierarchy, leverage agile development to manage stakeholders efficiently, and implement many other techniques of successful team collaboration. The course uses peer-reviewed research on highly effective teams to drive online discussions of advanced topics. The curriculum leverages the instructional team's combined decades of experience leading groups toward success in computer science projects. Although the OMSCS focus is evident, the principles covered in the course are applicable to a variety of software engineering use cases. We implement a modified colloquium framework. This is an environment that fosters and respects every person's contribution to group discussions. You are presented with readings each week and are expected to participate in a weekly group discussion on those readings in our online forum. In lieu of posting to the online forum, you may attend a live weekly video discussion meeting. Feel free to bring your unique questions or concerns to this weekly video meeting for a case study discussion.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ODA",
+   "title": "Data Structures and Algorithms",
+   "schedule": "Every Spring, Summer, Fall",
+   "lastOffered": "",
+   "description": "This seminar mirrors the undergraduate CS1332 class, Data Structures & Algorithms. Covering the same content as the CS1332 professional certificate on edX , the seminar begins by covering intermediate to advanced concepts in data structures, including linked lists, stacks, queues, binary trees, heaps, and hashmaps. It then continues into intermediate to advanced concepts in algorithms, including divide and conquer algorithms, pattern matching, Dijkstra's minimum spanning tree, and dynamic programming. The seminar assumes prior CS knowledge and is useful as a preparation course for future studies in algorithms.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OED",
+   "title": "CS Educators",
+   "schedule": "Every Fall",
+   "lastOffered": "",
+   "description": "It seems like every few weeks we read another article about the shortage of computer science graduates and how that is having negative effects on the tech industry. The issue doesn't stem from a lack of interest in the field, but rather a dearth of computer science educators. Led by instructional associate and Oregon State University lecturer Eric Ianni, this seminar is designed to help prepare future computer science teachers for success or help update current educators' pedagogical tool chest. No matter your teaching experience, there is something in this seminar for you. We will start with general educator best practices and progress to computer science specific techniques. The seminar will cover all sorts of modalities of learning: in-person, online/remote, synchronous, and asynchronous. So if you ever had the itch to teach computer science this seminar is for you!",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OGE",
+   "title": "Global Entrepreneurship - Launch",
+   "schedule": "Every Spring, Summer, and Fall",
+   "lastOffered": "",
+   "description": "Building on the foundation of CS8803-O17: Global Entrepreneurship , this advanced seminar empowers students to transform their entrepreneurial concepts into viable startup ventures. Modeled after Georgia Tech's successful CREATE-X Launch program, students will evolve their ideas from concept to market-ready enterprises. Participants will refine their business models, develop minimum viable products, engage with potential customers, and prepare comprehensive go-to-market strategies. Throughout the semester, students will have access to expert guidance, peer feedback, and resources designed to address the unique challenges of launching a startup globally. By the course's conclusion, students will have developed not just a theoretical understanding of entrepreneurship, but a practical roadmap and the essential tools needed to launch their own sustainable, scalable ventures.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OHR",
+   "title": "Deep Reinforcement Learning and Humanoid Robotics",
+   "schedule": "Summer 2026, Fall 2026",
+   "lastOffered": "",
+   "description": "This seminar focuses on deep reinforcement learning (DRL) and its applications to humanoid robotics. We begin with an introduction to RL foundations and a broad overview of learning methods, extending these concepts to deep neural network-based policy learning. The curriculum covers essential approaches including policy gradients, value-based methods, and actor-critic algorithms. We will also delve into advanced techniques such as TRPO, PPO, and Deep RL with Q-functions, establishing a strong theoretical toolkit for continuous robot control. Building on this foundation, the seminar explores how DRL enables complex humanoid behaviors like locomotion, whole-body coordination, and dexterous manipulation. We will address practical challenges such as sim-to-real transfer and cross-embodiment generalization, alongside complementary paradigms like imitation learning, diffusion policies, and vision-language-action (VLA) models. Ultimately, the course provides a comprehensive understanding of achieving robust, adaptive, and scalable humanoid robot intelligence.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OLA",
+   "title": "Living with Artificial Intelligence",
+   "schedule": "Fall 2026",
+   "lastOffered": "",
+   "description": "What happens to the way we think, create and relate when a machine can generate essays, suggest ideas and validate feelings just a prompt away? Adopting AI is a double-edged sword across many areas of life, and outcomes can be situation-dependent and unpredictable. In the first half of this seminar, students will learn concepts and frameworks to identify benefits and risks in AI adoption. In the second half, students will apply Human-Computer Interaction methods to explore what works best for themselves and people around them. Whether you are fascinated, skeptical or simply curious about integrating AI tools into daily work and life, this seminar offers a non-judgmental space to rethink your assumptions, raise questions and build your own path.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OLP",
+   "title": "The Language of Proofs",
+   "schedule": "Every Spring, Summer, and Fall",
+   "lastOffered": "",
+   "description": "The Language of Proofs seminar is designed to set students up for success prior to taking CS 6515: Intro to Graduate Algorithms . Students wanting to get introductory training in the formalism of proof writing will find this seminar useful. The seminar will meet every week, alternating between sections to cover the theory and review sections where the class will discuss the worksheets shared in the previous section. Students are strongly encouraged to work the exercises that will be provided (this is the way to learn the material). The class will have one simple assignment every two weeks to check your attendance. Students taking these quizzes should expect a satisfactory grade in the seminar.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ONA",
+   "title": "NeuroAI: Intelligence, Brains, and Machines",
+   "schedule": "Fall 2026",
+   "lastOffered": "",
+   "description": "This seminar is for students of artificial intelligence who want a foundation in neuroscience, cognitive neuroscience, neurotechnology, and consciousness studies. The course examines how biological systems compute, learn, represent, remember, attend, act, use language, and support conscious experience. Rather than treating the brain as a vague inspiration for artificial neural networks, the seminar asks what AI students should understand about neurons, circuits, learning, memory, attention, executive control, language, brain-computer interfaces, synthetic biological intelligence, and neuroethics. The course uses a layered learning model. A compact computational cognitive neuroscience textbook provides the shared foundation. A small number of carefully selected papers expose students to major research conversations in NeuroAI, neurotechnology, artificial consciousness, and neuroethics. AI-assisted reading workflows, including NotebookLM audio overviews, are used to help students engage difficult interdisciplinary material critically and efficiently.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OOL",
+   "title": "Introduction to Online Learning Success",
+   "schedule": "Fall 2026",
+   "lastOffered": "",
+   "description": "This seminar provides an introduction to succeeding as an online graduate student. Participants will learn how to effectively manage their time, communicate with instructors and teaching assistants, collaborate with classmates, and take advantage of the many academic, professional, and community resources available through OMSCS and Georgia Tech. Topics will be grounded in the research fields of cognitive and educational psychology, and also include maintaining motivation, balancing competing priorities, and building habits that support long-term success in an online learning environment.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OOP",
+   "title": "Object-Oriented Programming in Java",
+   "schedule": "Every Spring, Summer, and Fall",
+   "lastOffered": "",
+   "description": "This seminar mirrors the undergraduate version of CS1331: Object-Oriented Programming in Java. Covering the same content as the CS1331 professional certificate on edX , the seminar takes students through the basics of Java, then focuses on object-oriented programming practices in Java. The seminar assumes some prior CS knowledge, and is especially good for students who want to pick up Java as an additional language or who have limited prior OOP experience.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OPA",
+   "title": "Physical AI: Embodied Intelligence and Real-World Interaction",
+   "schedule": "Fall 2026",
+   "lastOffered": "",
+   "description": "This advanced graduate seminar explores the emerging field of Physical AI, where artificial intelligence systems are embodied in physical agents that perceive, reason about, and interact with the real world. Students will examine the intersection of robotics, computer vision, machine learning, and control theory to understand how AI systems can operate effectively in unstructured, dynamic environments. The course covers foundational concepts, current research challenges, and practical applications spanning humanoid robots, autonomous vehicles, manipulation systems, and beyond. Through a combination of paper discussions, guest lectures from industry and academia, and hands-on projects, students will gain deep insights into the unique challenges of deploying AI in physical systems, including real-time constraints, safety considerations, multimodal perception, and the integration of learning with classical control approaches.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OPH",
+   "title": "PhD Applicants",
+   "schedule": "",
+   "lastOffered": "Fall 2023, Fall 2024, Fall 2026",
+   "description": "In this seminar, led by Dr. Nick Lytle, students planning to apply for PhD programs in Fall 2024 will meet to review statements of purpose, discuss application processes, and discuss PhD prospects.",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ORA",
+   "title": "Language Models, Reasoning, and Agents",
+   "schedule": "Fall 2026",
+   "lastOffered": "",
+   "description": "Artificial intelligence has developed the ability to produce complex software, prove difficult mathematical theorems, and synthesize knowledge from extensive online research. How have language models evolved from mere text predictors to agents capable of advanced reasoning? What techniques are used to induce these capabilities? How does your coding agent (e.g., Claude Code) actually work? This survey course of frontier AI research will cover machine learning, reinforcement learning, automated reasoning, and software synthesis. You'll learn what large language models truly are, why they have shown success in some reasoning domains, and why they fail in the ways they often do",
+   "status": "scheduled",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OAA",
+   "title": "Agentic AI Essentials",
+   "schedule": "",
+   "lastOffered": "Spring 2026",
+   "description": "Agentic AI marks the next evolution beyond traditional chatbots and LLM-based assistants, enabling AI systems to reason, plan, act, and learn autonomously. Unlike standard LLMs that passively respond to inputs, Agentic AI follows a four-step process: it perceives information from multiple sources, reasons through complex tasks, executes plans, and improves through feedback. This seminar is organized as a series of modules, each consisting of lectures, notebooks, write-ups, and discussions. It is designed for learners interested in exploring agentic AI; no prior deep learning experience required. Students will gain hands-on experience in prompt engineering, large language models (LLMs), retrieval-augmented generation (RAG), and ReAct (Reasoning and Acting) frameworks to build interactive, scalable AI solutions using pre-trained models. The seminar also includes optional, ungraded, instructor-led synchronous workshops, sponsored by NVIDIA DLI. These workshops offer cloud GPU access for deeper hands-on practice and provide opportunities to earn NVIDIA certificates of competency upon successful completion of each workshop in the series.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OAI",
+   "title": "AI Reading Group",
+   "schedule": "",
+   "lastOffered": "Spring 2022",
+   "description": "In this semi-synchronous seminar led by David Joyner, students read and discuss books and papers about artificial intelligence. The main intent of the seminar is to use these readings as jumping-off points for synchronous and asynchronous discussions.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OAS",
+   "title": "AI for Science",
+   "schedule": "",
+   "lastOffered": "Summer 2025",
+   "description": "This seminar offers a comprehensive exploration of how artificial intelligence (AI) is transforming scientific and engineering domains—from physics and chemistry to biology, environmental science, urban systems, GIS, and mechanical engineering. Each week centers on a specific application area, examining core AI techniques (such as machine learning, deep learning, reinforcement learning, and physics-informed modeling), essential programming tools (Python, MATLAB, Julia, PyTorch, TensorFlow), and real-world case studies. Participants will learn how to apply AI for data analysis, simulation, automated experimentation, and advanced design—developing both a strong foundation in AI methods and insight into cutting-edge innovations. Through a mix of lectures, discussions, and hands-on demos, the seminar equips OMSCS students and research-driven professionals with the skills to harness AI in scientific discovery, product development, environmental solutions, and beyond.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OCH",
+   "title": "Building Applications with ChatGPT",
+   "schedule": "",
+   "lastOffered": "Fall 2024",
+   "description": "This seminar provides a comprehensive understanding of building applications with ChatGPT. From exploring the fundamentals to deploying production-grade virtual assistants, the seminar covers various aspects of integrating ChatGPT into real-world applications. The assignments in each module allow students to apply the knowledge gained and develop practical skills in building chat-based customer support systems, content recommendation chatbots, and deploying virtual assistants.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ODL",
+   "title": "Deep Learning and Generative AI Essentials",
+   "schedule": "",
+   "lastOffered": "Spring 2026",
+   "description": "Deep learning forms the foundation of modern artificial intelligence systems, enabling computers to learn complex patterns from large datasets and perform tasks such as image recognition, language understanding, and decision-making. Generative AI builds on this foundation to create models capable of producing realistic content, from images and text to simulations and synthetic data. This seminar is organized as a series of modules, each consisting of lectures, notebooks, write-ups, and discussions. Designed for learners from all backgrounds, it offers an intuitive, hands-on introduction to the foundational concepts of deep learning and generative AI, emphasizing practical understanding over heavy mathematical theory. Participants will explore the building blocks of neural networks and gain exposure to key generative AI techniques, including Autoencoders, Generative Adversarial Networks (GANs), and Diffusion Models. The seminar also includes optional, ungraded, instructor-led synchronous workshops, sponsored by NVIDIA DLI. These workshops offer cloud GPU access for deeper hands-on practice and provide opportunities to earn NVIDIA certificates of competency upon successful completion of each workshop in the series.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ODM",
+   "title": "Machine Learning & Data Science Tooling",
+   "schedule": "",
+   "lastOffered": "Summer 2022",
+   "description": "Led by instructional associate Robert Bates, this seminar introduced students to common tools used by ML and DA practitioners, such as SciPy, Matplotlib, PyTorch, and more.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ODW",
+   "title": "Developing Mobile Experience for Well-Being: Health Informatics and Mobile App Design",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "This seminar covers key concepts for developing mobile applications to promote individuals' well-being. It familiarizes students with various ideas in health informatics, such as self-experimentation, behavior change theories, and self-tracking. It demonstrates how to leverage these in prototyping and developing mobile apps. The course emphasizes a hands-on approach, culminating in group projects where students will learn how to design and develop preliminary mobile well-being applications.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OEN",
+   "title": "Entrepreneurship",
+   "schedule": "",
+   "lastOffered": "Spring 2022",
+   "description": "This seminar, led by Keith McGreggor and Ana Rusch, was for current and prospective entrepreneurs and start-up founders. Students reviewed the content used for Keith's on-campus Global Entrepreneurship class, discussed their ideas with classmates and the seminar's faculty, completed short assignments to structure their thoughts and share them with classmates, and joined synchronous meet-ups with others in the course.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OFL",
+   "title": "Federated Learning and Machine Learning Operations",
+   "schedule": "",
+   "lastOffered": "Spring 2025",
+   "description": "This seminar explores the principles of federated learning and its integration with Machine Learning Operations (MLOps). Students will learn about decentralized model training, privacy, security, and how MLOps frameworks enhance the deployment and management of federated learning models. The course includes discussions, hands-on projects, and case studies to provide a comprehensive understanding of these technologies.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OFT",
+   "title": "Futurism Reading Group",
+   "schedule": "Every Spring",
+   "lastOffered": "",
+   "description": "With recent advances in artificial intelligence, materials science, quantum computing, biotechnology, and more, the future promises to look very different. Futurism or futures studies is the discipline of exploring what the future will look like and how people will live and work with these upcoming advancements. Many books and papers have been written on this subject from well-known thinkers like Max Tegmark, Michio Kaku, and Mauro F. Guillén. In this synchronous seminar (a time will be selected based on a poll of enrollees) co-led by Eric Ianni and Ana Rusch, students will read through selected books and papers on the topic, then meet weekly to discuss what the future will look like based on those topics and how the work they are doing intersects with that future.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OGV",
+   "title": "GVU Brown Bag",
+   "schedule": "",
+   "lastOffered": "Fall 2021",
+   "description": "The GVU Brown Bag is a weekly on-campus lecture series put on by the GVU (Graphics, Visualization, and Usability) Center where guest speakers are invited to Georgia Tech to give talks about their work. Some of the speakers included Jer Thorp from NYU, Krystina Madej from DePaul University, and Q. Vera Liao from the IBM TJ Watson Research Center—as well as Georgia Tech faculty such as Mark Braunstein, Beth Mynatt, and Noura Howell. Students watched and discussed the seminar synchronously among themselves. There was also an asynchronous forum to support having questions and discussion throughout the week.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OHD",
+   "title": "HCI Design, Justice-Oriented Design, and Critical Computing",
+   "schedule": "",
+   "lastOffered": "Summer 2024",
+   "description": "This course is to provide an understanding of recent approaches to research and major topics in design and human-computer interaction (HCI) research. It is an introductory course that presupposes no prior HCI knowledge and is useful as a preparation course for those interested in different approaches to crafting HCI research and major topics in the third wave of HCI and design-oriented approaches, focusing on the social-cultural context. Topics will include research through design, justice-oriented design, and critical computing. Each course will last one hour including a short lecture about the assigned reading and group discussion. In this synchronous seminar, led by Inha Cha, students will read through selected papers and articles on the topic, and then meet weekly to discuss those topics. Asynchronous participation will be conducted via Ed Discussion.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OIC",
+   "title": "Introduction to C Programming",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "This seminar, intended for students used to high-level languages such as Ruby and Python, will teach C, the lingua franca for systems programming over the past forty years due to its elegance, efficiency, and low-level (close to the hardware) capabilities. We will tackle C's syntax, type system, and program layout, as well as arrays, pointers, and control structures, giving students the ability to translate familiar techniques into this lower-level language. In this project-based course, students will be guided through the implementation of an interpreter for a very basic Lisp, designed to give them a sense of what the computer, whether they use low-level languages or continue with high-level ones, is doing. We'll also cover file I/O, memory management, C's standard library, and the tools necessary to implement common data structures like hash tables and resizable arrays.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OLL",
+   "title": "Cognitive Science and LLMs",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "Are LLMs helping or hurting your productivity? Are they causing you to lose your skills or critical thinking ability? Both? These are open research questions, and the findings so far are mixed. In this seminar, we will review and discuss human-AI interaction research and work together to design and run our own small studies to measure the effects of LLMs on our productivity and thinking. This seminar aims to develop students' ability to monitor their own use of LLMs, to notice when they are handing off thinking or decision-making to an LLM, and to decide if and when they want to do so. Together, we will develop techniques to help us see what impacts LLMs may be having on our work and our minds.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OLM",
+   "title": "Human-Centered Large Language Models Design",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "As Large Language Model (LLM) technologies continue to advance in complexity, their application domains are increasingly broad. This seminar delves into the realm of LLMs, focusing on how we can apply key concepts of Human-Computer Interaction (HCI) to LLM research. Students will read both foundational and cutting-edge papers and participate in weekly discussions to further explore the topics of AI. We will explore how these topics can be applied to advancements in both industry and research settings. Topics include user-centered design of LLMs, ethics, and accessibility of AI, as well as topics related to student interests. Classes will cover theoretical foundations, as well as provide a practical framework for students to develop a comprehensive research proposal. Students will have the opportunity to explore their own interests as part of a course-long investigation of a novel application of AI.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OLS",
+   "title": "Learning at Scale",
+   "schedule": "",
+   "lastOffered": "Fall 2021",
+   "description": "In this seminar, students read four books together: Failure to Disrupt by Justin Reich; Writers in the Secret Garden by Cecilia Aragon and Katie Davis; Peer Pedagogies on Digital Platforms by Michael Dezuanni; and The Distributed Classroom by David Joyner and Charles Isbell. Students discussed the readings asynchronously each week through discussion forums.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OMA",
+   "title": "Multi-Agent Systems and Collaborative Intelligence",
+   "schedule": "",
+   "lastOffered": "Spring 2025",
+   "description": "This advanced graduate seminar explores the theoretical foundations, computational frameworks, and emerging paradigms of multi-agent systems (MAS) and collaborative artificial intelligence. Students will critically examine how autonomous agents interact, negotiate, coordinate, and collectively solve complex problems across diverse domains.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OML",
+   "title": "Machine Learning for Sensor-Based Human Activity Recognition: A Research Perspective",
+   "schedule": "",
+   "lastOffered": "Spring 2026",
+   "description": "Capturing and analyzing human behavior has been an active domain of research, thanks to the advances in sensing technologies and machine learning (ML). In this domain, the challenge of human activity recognition (HAR) lies at the core and has huge potential in healthcare, surveillance, sports, etc. The goal behind HAR is to leverage the data collected by on-body wearable and/or ubiquitous ambient sensors and recognize human activities of interest. In this session, we will study how machine learning can be applied to address this challenge of HAR. In particular, this offered session will consist of three units: (i) The HAR Pipeline (training machine learning models in time-series sensor data), (ii) Recent Advances in HAR (A Case Study of Self-Supervised Learning for HAR), and (iii) Addressing the Challenges of Multimodality in HAR. These units will not only introduce and discuss the state-of-the-art methods but will also consist of a tutorial at the end, where the participants will get a hands-on experience of working with the said state-of-the-art methods. Following this session, the participants will have gained an understanding of the fundamentals of ML for HAR along with a comprehensive view of the recent advances and challenges, enabling them to conduct research in this domain. As a prerequisite, the participants are expected to have a basic understanding of machine learning.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ONC",
+   "title": "Understanding Online Communities",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "The seminar will cover identity, free speech, and behavior in online communities. Online communities are spaces on the web where people find community and friendship around shared hobbies, life experiences, and more. We will first explore the nature of identity and self expression in online spaces and discuss the history of online social platforms. We will look into the business models and incentive structures that lead platforms to be designed the way they are today. Finally, we will tie everything together by discussing how platforms shape online behavior (for both good and bad).",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OPC",
+   "title": "CS in Popular Culture",
+   "schedule": "Every Summer",
+   "lastOffered": "",
+   "description": "For those of us still waiting for our flying car, looking to Science Fiction as a way to predict future technologies may seem a bit silly, but we shouldn't be so dismissive. From the days of Jules Vern, sci-fi authors have been imagining fantastical futures for humanity. Many of these \"predictions\" have been based on little more than a blind faith in humanity's potential, yet many of these predictions have come to pass. Just think, a multi-billion dollar suit between Apple and Samsung cited Star Trek in the legal proceedings! Come join us as we explore past \"predictions\" as well as stories about the world yet to arrive and connect them to current trends and ongoing research in AI and computing as a whole. In this synchronous seminar (a time will be selected based on a poll of enrollees) co-led by Eric Ianni and Ana Rusch, students will watch and read through selected movies, and short stories on the topic, as well as analyze music that deals with these concepts. We will meet bi-weekly via Teams.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ORI",
+   "title": "Human-Robot Interaction",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "In this seminar course, students will delve into recent papers and explore current cutting-edge research in robotics. Esteemed robotics professionals from Georgia Tech, other prestigious institutions, and leading industry players will contribute to the learning experience through several guest lectures each semester. Participants are expected to engage actively, participating in biweekly presentations delivered to the robotics community by top researchers from both academia and industry. They are designed for students eager to explore the latest technological advancements and their applications across various topics, including artificial intelligence, medical robotics, soft robotics, sensing, healthcare, and human-robot interactions.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ORS",
+   "title": "PhD Research Brown Bag",
+   "schedule": "",
+   "lastOffered": "Spring 2025",
+   "description": "In this seminar, several on-campus PhD students will present their work and hold a synchronous Q&A with students, either about their work or about PhD life as a whole. Hosted by Associate Director of Research, Nicholas Lytle, come hear talks by speakers like Idel Martinez (Computer Science Education), Niranjan Kumar Kannabiran (humanoid robotics), Sarah Matthew (Human-centered AI and technology adoption), and more! Learn about what state-of-the-art computing research is being done at Georgia Tech and get an opportunity to speak and learn from future leaders!",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 ORW",
+   "title": "Writing Research Workshop",
+   "schedule": "",
+   "lastOffered": "Summer 2026",
+   "description": "This seminar is intended to provide a supportive space for students who are in the writing stage of a research project with the intention of submitting to a conference or journal. Topics of interest include the submission process, the peer review process, and making good use of feedback.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OSO",
+   "title": "Computational Sociology",
+   "schedule": "",
+   "lastOffered": "Fall 2022",
+   "description": "Led by Ana Rusch, this seminar will explore Computational Sociology, a sub-field of both Computer Science and Sociology. As part of this, students will participate in discussions, read case studies and papers, and have the opportunity to propose and get feedback on their own research ideas and progress. This seminar will be divided into three main sections. The first section will review case studies of how computer science, such as artificial intelligence and machine learning, have been used to analyze and solve complex social problems. These case studies will analyze computer science through a multidimensional sociological perspective. The second section of this seminar will review the sociohistorical history and ethics of computer science. Finally, the third section of this seminar will give students a space to discuss their own research ideas, practice conference presentations, and receive feedback on papers for submission. Grading will be based on participation, either synchronous or asynchronous. The synchronous meeting times/dates will be determined based on most of the students’ availability. Asynchronous participation via will be conducted via Ed Discussion.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OST",
+   "title": "Social Media and Technology",
+   "schedule": "",
+   "lastOffered": "Spring 2025",
+   "description": "How has the political landscape changed in the age of social media? Why is Congress trying to ban TikTok? In this seminar, we will explore the many intersections between politics and social media, through discussions of academic research and non-academic multimedia pieces. Discussion topics could include: regulation, elections, misinformation, polarization, digital activism, and more. We will focus mainly on the U.S. context, but we may explore other geographic regions based on student interest.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OTM",
+   "title": "TinyML and Edge AI for Vision",
+   "schedule": "",
+   "lastOffered": "Summer 2025",
+   "description": "This graduate-level seminar explores the emerging field of TinyML and Edge AI, with a specific focus on computer vision applications deployed on resource-constrained devices. Over the semester, students will delve into the theory, tools, and practices required to build and deploy intelligent vision systems at the edge—where computing power, memory, and energy are limited. Through a combination of curated readings, virtual discussions (every other week), and a series of four linearly related hands-on projects, students will gain a comprehensive understanding of how to design, optimize, and implement machine learning models that operate efficiently on microcontrollers, mobile hardware, and embedded systems. Topics include model quantization, hardware-aware neural architecture design, low-power computing, edge deployment strategies, and privacy-aware vision applications. The course culminates in a final integrated project that synthesizes previous work into a complete, end-to-end TinyML vision solution.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OUI",
+   "title": "Designing and Building User Interfaces",
+   "schedule": "",
+   "lastOffered": "Summer 2025",
+   "description": "In this course, we aim to provide students with both conceptual knowledge of user interfaces and practical experience in building user interfaces. We will understand the basic components of a user interface from both UI/UX and technical perspectives, and students will learn how to design a user-friendly interface through popular prototyping tools such as Figma. The course will cover the popular cross-platform app development tool Flutter. While some basic understanding of coding is preferred, resources will be provided to help students get up to speed. By the end of this course, students should be confident in designing and deploying user interfaces on their own.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OUS",
+   "title": "Usable Security",
+   "schedule": "",
+   "lastOffered": "Spring 2023",
+   "description": "How can we design systems that improve end-user agency over their data and experiences online? How can we design systems that encourage better cybersecurity and privacy behaviors? These are important questions in computing: without agency over their data, users are subject to exploitation; without good end-user cybersecurity and privacy behaviors, the full potential of computing is hamstrung by its dangers. The field of usable privacy and security combines ideas from HCI, cybersecurity and privacy research to explore solutions to these questions. In this class, you’ll learn the basics of usable privacy and security research. You’ll learn about why usable privacy and security is important, why it’s hard, and what you can do about it. We’ll focus on building the skills necessary to conduct original usable privacy and security research, which requires an understanding of both core concepts in cybersecurity and privacy (e.g., encryption, authentication) as well as HCI research methods (e.g., human-centered design, prototyping). To build these skills, the class will include a small set of weekly readings and a number of in-class activities.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OUX",
+   "title": "UX Design Principles with a Focus on Virtual Reality",
+   "schedule": "",
+   "lastOffered": "Summer 2025",
+   "description": "This interdisciplinary seminar offers an in-depth exploration of one of today’s most dynamic fields: user experience (UX) design, with a specific focus on virtual reality (VR). Students will explore UX theories through hands-on projects, equipping them for careers as UX designers in immersive VR environments. Throughout the semester, we will engage in class discussions, conduct benchmark studies, and analyze UX implementations across a range of VR platforms.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OWN",
+   "title": "Women in Tech",
+   "schedule": "",
+   "lastOffered": "Spring 2025",
+   "description": "This synchronous seminar meets on Mondays at 7pm ET this semester via teleconference. Led by Dr. Ana Rusch, students in the seminar discuss the contributions of women in the fields of CS and IT, engage with cutting edge research on technology, and network with others in the field. Synchronous sessions feature discussions, guest speakers, and more.",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  },
+  {
+   "code": "CS 8001 OWS",
+   "title": "Wearable Sensor-Based Analysis of Activities and Well-Being",
+   "schedule": "",
+   "lastOffered": "Summer 2025",
+   "description": "The widespread usage and proliferation of commodity wearable devices (e.g., smartwatches and smartphones) make them highly suited for recording and analyzing bio-signals at scale. Moreover, the ability to collect data in naturalistic, in-the-wild settings is a significant advantage, as it enables more objective modeling of movements and well-being. In this seminar, we will first discuss how activities are automatically recognized in today’s wearables—charting the evolution from early handcrafted heuristics to modern approaches that learn useful features directly from annotated data (which can be costly to obtain). We will then focus on a class of methods known as self-supervised learning, which leverages large-scale, unlabeled data—cheaper and easier to collect—for recognizing activities, as well as the opportunistic integration of multiple modalities into the recognition pipeline. Finally, we will explore how wearable data is used to analyze health and well-being across a range of conditions, from respiratory illnesses to stroke rehabilitation. This seminar will include short coding explorations, paper readings, and guest lectures—all designed to deepen understanding of how wearables are applied in human-centered scenarios. The Impact of Computing at Scale with Design, Operation, and Societal Impacts of Data Centers",
+   "status": "past",
+   "creditHours": 1,
+   "grading": "pass/fail"
+  }
+ ]
+}

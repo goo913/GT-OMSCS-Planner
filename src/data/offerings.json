@@ -1,0 +1,1900 @@
+{
+ "version": "2026.08.19",
+ "generatedAt": "2026-08-19T14:51:44Z",
+ "source": "Fall 2026 OMSCS Course Offering History (PDF)",
+ "sourceUrl": "https://omscs.gatech.edu/sites/default/files/documents/Other/Fall%202026%20OMSCS%20Course%20Offering%20History.pdf",
+ "observedTerms": [
+  "2022FA",
+  "2023SP",
+  "2023SU",
+  "2023FA",
+  "2024SP",
+  "2024SU",
+  "2024FA",
+  "2025SP",
+  "2025SU",
+  "2025FA",
+  "2026SP",
+  "2026SU"
+ ],
+ "disclaimer": "Course offering history is informational only and is not a guarantee of future availability; a term's offerings are not final until shortly before that term's Phase I registration.",
+ "byCourse": {
+  "CS 6035": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6150": {
+   "history": [
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 2,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": false,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6200": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6210": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6211": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6238": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6250": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6260": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6261": {
+   "history": [
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 2,
+    "sp": 3,
+    "su": 0
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6262": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6263": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6264": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 2,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": false,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6265": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6290": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6291": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6300": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6310": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6340": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6400": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6422": {
+   "history": [
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 1,
+    "sp": 2,
+    "su": 2
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 6435": {
+   "history": [
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 3,
+    "sp": 3,
+    "su": 3
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 6440": {
+   "history": [
+    "2022FA",
+    "2023SU",
+    "2023FA",
+    "2024SU",
+    "2024FA",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 1,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": false,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6457": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6460": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6475": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6476": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 6491": {
+   "history": [
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 1,
+    "sp": 2,
+    "su": 2
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 6515": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6601": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6603": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6675": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6747": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6750": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 6795": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7210": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 7280": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7295": {
+   "history": [
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 2,
+    "sp": 3,
+    "su": 3
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 7400": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7470": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7496": {
+   "history": [
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 1,
+    "sp": 1,
+    "su": 2
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 7632": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7637": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7638": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7639": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CS 7641": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 3
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 7642": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7643": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7646": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 7650": {
+   "history": [
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 3,
+    "sp": 3,
+    "su": 4
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 O08": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 O15": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 O17": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 O20": {
+   "history": [
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 1,
+    "sp": 1,
+    "su": 2
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 7240": {
+   "history": [
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 2,
+    "sp": 2,
+    "su": 2
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 O24": {
+   "history": [
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 2,
+    "sp": 2,
+    "su": 2
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 O27": {
+   "history": [
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": false,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 0,
+    "sp": 1,
+    "su": 1
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 7711": {
+   "history": [
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": false,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 0,
+    "sp": 1,
+    "su": 1
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CS 8803 ORO": {
+   "history": [
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": false,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 0,
+    "sp": 1,
+    "su": 1
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "CSE 6220": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "CSE 6242": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CSE 6250": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "CSE 6742": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "INTA 6450": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "ISYE 6402": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "ISYE 6420": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "ISYE 6501": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "ISYE 6525": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "ISYE 6644": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "ISYE 6669": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023FA",
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 0
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  },
+  "MGT 6311": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "MGT 8813": {
+   "history": [
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 2,
+    "sp": 3,
+    "su": 3
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SU"
+  },
+  "PUBP 6725": {
+   "history": [
+    "2022FA",
+    "2023SP",
+    "2023SU",
+    "2023FA",
+    "2024SP",
+    "2024SU",
+    "2024FA",
+    "2025SP",
+    "2025SU",
+    "2025FA",
+    "2026SP",
+    "2026SU"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": true,
+   "counts": {
+    "fa": 4,
+    "sp": 4,
+    "su": 4
+   },
+   "everyFall": true,
+   "everySpring": true,
+   "everySummer": true,
+   "lastOffered": "2026SU"
+  },
+  "PUBP 8823": {
+   "history": [
+    "2024SP",
+    "2024FA",
+    "2025SP",
+    "2025FA",
+    "2026SP"
+   ],
+   "fall": true,
+   "spring": true,
+   "summer": false,
+   "counts": {
+    "fa": 2,
+    "sp": 3,
+    "su": 0
+   },
+   "everyFall": false,
+   "everySpring": false,
+   "everySummer": false,
+   "lastOffered": "2026SP"
+  }
+ }
+}

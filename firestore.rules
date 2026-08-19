@@ -1,0 +1,66 @@
+rules_version = '2';
+
+// GT OMSCS Planner — Firestore security rules
+//
+// The entire product is ONE document. There is no authentication anywhere in this
+// app, deliberately: it is one person's degree plan, maintained by two people who
+// both need full access and neither of whom wants to log in. Anyone with the
+// GitHub Pages URL can read and edit it.
+//
+// Safety therefore comes from two things, not from identity:
+//   1. exactly one document path is writable, and
+//   2. a write is only accepted if the resulting document still looks like a plan.
+// Everything else in the database is denied outright.
+//
+// Deploy with:
+//   firebase deploy --only firestore:rules
+//
+// Keep the project on the Spark (free) plan with no billing account attached. The
+// worst case under abuse is an exhausted daily quota, never a bill.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // The single shared plan. Must match VITE_PLAN_DOC_PATH in .env.local.
+    match /plans/goo {
+      allow read: if true;
+      allow write: if isPlan(request.resource.data);
+    }
+
+    // Everything else in the database, denied.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // A write is accepted only if the document it would produce has exactly the
+    // plan's top-level keys, with the right primitive types and sane bounds.
+    // Placement and note *contents* are re-validated on read by normalizePlan()
+    // in src/lib/plan.ts, which drops anything malformed rather than rendering it.
+    function isPlan(d) {
+      return d.keys().hasOnly([
+               'schemaVersion',
+               'specialization',
+               'matriculationTerm',
+               'targetGraduationTerm',
+               'placements',
+               'notes',
+               'updatedAt'
+             ])
+             && d.keys().hasAll(['schemaVersion', 'specialization', 'matriculationTerm', 'placements', 'updatedAt'])
+             && d.schemaVersion is int
+             && d.schemaVersion == 1
+             && d.specialization is string
+             && d.specialization.size() <= 8
+             && d.matriculationTerm is string
+             && d.matriculationTerm.matches('^[0-9]{4}(FA|SP|SU)$')
+             && (!('targetGraduationTerm' in d)
+                 || d.targetGraduationTerm == null
+                 || (d.targetGraduationTerm is string
+                     && d.targetGraduationTerm.matches('^[0-9]{4}(FA|SP|SU)$')))
+             && d.placements is map
+             && d.placements.size() <= 60
+             && (!('notes' in d) || (d.notes is map && d.notes.size() <= 40))
+             && d.updatedAt is int;
+    }
+  }
+}
