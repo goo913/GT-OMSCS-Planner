@@ -104,7 +104,7 @@ export function MetricRow({
   className?: string
 }) {
   return (
-    <div className={cn('flex items-end gap-3', className)}>
+    <div className={cn('flex min-w-0 flex-wrap items-end gap-x-3 gap-y-1', className)}>
       <Metric kind="rating" value={rating} showBar={showBars} />
       <Metric kind="difficulty" value={difficulty} showBar={showBars} />
       <Metric kind="workload" value={workload} showBar={showBars} />

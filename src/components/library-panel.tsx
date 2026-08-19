@@ -276,7 +276,7 @@ export function LibraryPanel({
         )}
       </div>
 
-      <ScrollArea className="min-h-0 flex-1">
+      <ScrollArea className="min-h-0 w-full flex-1 [&>[data-radix-scroll-area-viewport]>div]:!block">
         <div className="divide-y">
           {showSeminars
             ? seminars.map((s) => (
@@ -386,7 +386,7 @@ function CourseRow({
                 {course.title}
               </span>
             </div>
-            <div className="flex items-end gap-3">
+            <div className="flex min-w-0 flex-wrap items-end gap-x-3 gap-y-1">
               <MetricRow
                 rating={oc?.rating}
                 difficulty={oc?.difficulty}

@@ -47,7 +47,7 @@ export function RequirementsPanel({
   return (
     <div className="flex h-full min-h-0 flex-col bg-sidebar">
       <Verdict validation={validation} />
-      <ScrollArea className="min-h-0 flex-1">
+      <ScrollArea className="min-h-0 w-full flex-1 [&>[data-radix-scroll-area-viewport]>div]:!block">
         <div className="space-y-1 p-2">
           {violations.length > 0 && (
             <section className="mb-2 space-y-1 rounded-md border border-destructive/40 bg-destructive/5 p-1.5">
