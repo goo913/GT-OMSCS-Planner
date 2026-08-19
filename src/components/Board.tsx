@@ -186,13 +186,23 @@ function TermColumn({
           </span>
           {summary && summary.workloadHoursPerWeek > 0 && (
             <span
-              title="Sum of OMSCentral self-reported hours per week"
-              style={
-                summary.workloadHoursPerWeek > RULES.workload.comfortableHoursPerWeek
-                  ? { color: 'var(--warn)', fontWeight: 700 }
-                  : undefined
-              }
+              className="load"
+              data-over={summary.workloadHoursPerWeek > RULES.workload.comfortableHoursPerWeek}
+              title={`≈${Math.round(summary.workloadHoursPerWeek)} hrs/week from OMSCentral self-reports, against a ${
+                RULES.workload.comfortableHoursPerWeek
+              }-hour comfortable load.${summary.workloadKnown ? '' : ' Some courses have no reported workload.'}`}
             >
+              <span className="load-track">
+                <span
+                  className="load-fill"
+                  style={{
+                    width: `${Math.min(
+                      100,
+                      (summary.workloadHoursPerWeek / RULES.workload.comfortableHoursPerWeek) * 100,
+                    )}%`,
+                  }}
+                />
+              </span>
               ≈{Math.round(summary.workloadHoursPerWeek)} h/wk
             </span>
           )}
