@@ -44,6 +44,7 @@ service cloud.firestore {
                'targetGraduationTerm',
                'placements',
                'notes',
+               'settings',
                'updatedAt'
              ])
              && d.keys().hasAll(['schemaVersion', 'specialization', 'matriculationTerm', 'placements', 'updatedAt'])
@@ -60,6 +61,7 @@ service cloud.firestore {
              && d.placements is map
              && d.placements.size() <= 60
              && (!('notes' in d) || (d.notes is map && d.notes.size() <= 40))
+             && (!('settings' in d) || (d.settings is map && d.settings.size() <= 12))
              && d.updatedAt is int;
     }
   }

@@ -56,6 +56,8 @@ export interface TermSummary {
 }
 
 export interface Validation {
+  /** Mirrors plan.settings.trackGrades; the view uses it to hide grade controls. */
+  trackGrades: boolean
   checks: Check[]
   slots: Slot[]
   /** Placed degree courses that fill no specialization slot. */
@@ -247,6 +249,10 @@ function pct(have: number, need: number): number {
 
 export function validate(plan: Plan): Validation {
   const spec = SPEC_BY_ID.get(plan.specialization) ?? SPEC_BY_ID.values().next().value!
+  // With grade tracking off the app plans courses, not outcomes: grade-dependent
+  // requirements drop out of the checklist rather than sitting there permanently
+  // "pending" on data the user has chosen not to enter.
+  const trackGrades = plan.settings?.trackGrades ?? false
   const placements = Object.values(plan.placements).filter((p) => p && p.code && p.term)
   const degreePlacements = placements.filter((p) => !isSeminarCode(p.code))
 
@@ -368,7 +374,9 @@ export function validate(plan: Plan): Validation {
         This only fails once it is genuinely unreachable — when the course slots still
         free inside the window cannot get you to two qualifying foundational courses.
         An empty plan is "pending", not "broken". */
-  const foundationalConfirmed = foundationalInWindow.filter((p) => p.grade !== null).length
+  const foundationalConfirmed = trackGrades
+    ? foundationalInWindow.filter((p) => p.grade !== null).length
+    : foundationalInWindow.length
   const foundationalNeed = RULES.foundational.coursesRequired
   const windowCapacity = window.reduce(
     (n, t) => n + RULES.registration.maxDegreeCourses[seasonOf(t)],
@@ -379,7 +387,9 @@ export function validate(plan: Plan): Validation {
   const foundationalReachable = foundationalInWindow.length + windowRoom >= foundationalNeed
   checks.push({
     id: 'foundational',
-    label: `${foundationalNeed} foundational courses, grade ${RULES.foundational.minGrade}+`,
+    label: trackGrades
+      ? `${foundationalNeed} foundational courses, grade ${RULES.foundational.minGrade}+`
+      : `${foundationalNeed} foundational courses planned`,
     status:
       foundationalConfirmed >= foundationalNeed
         ? 'ok'
@@ -396,7 +406,11 @@ export function validate(plan: Plan): Validation {
             .slice(0, foundationalNeed)
             .map((p) => p.code)
             .join(' + ')} by ${termLabel(foundationalMetTerm!)}.${
-            foundationalConfirmed >= foundationalNeed ? '' : ' Grades not entered yet.'
+            trackGrades
+              ? foundationalConfirmed >= foundationalNeed
+                ? ''
+                : ' Grades not entered yet.'
+              : ` Each still needs a ${RULES.foundational.minGrade} or better to count.`
           }`
         : foundationalReachable
           ? `${foundationalInWindow.length} of ${foundationalNeed} placed in ${termLabel(
@@ -471,8 +485,9 @@ export function validate(plan: Plan): Validation {
     detail: 'The mirror of the non-CS/CSE cap; this is the line DegreeWorks audits.',
   })
 
-  /* 8. GPA */
-  checks.push({
+  /* 8. GPA — only a requirement you can check if you are recording grades. */
+  if (trackGrades)
+    checks.push({
     id: 'gpa',
     label: `Cumulative GPA ≥ ${RULES.degree.minGpaToGraduate.toFixed(1)}`,
     status: gpa === null ? 'pending' : gpa >= RULES.degree.minGpaToGraduate ? 'ok' : 'fail',
@@ -494,7 +509,8 @@ export function validate(plan: Plan): Validation {
     (p) => specCourses.has(p.code) && p.grade !== null && !countsTowardSpecialization(p.grade),
   )
   const belowC = degreePlacements.filter((p) => p.grade !== null && !countsTowardDegree(p.grade))
-  checks.push({
+  if (trackGrades)
+    checks.push({
     id: 'min-grades',
     label: `Minimum grades (${RULES.degree.minGradeSpecialization} specialization, ${RULES.degree.minGradeCountsTowardDegree} elective)`,
     status: specBelowB.length || belowC.length ? 'fail' : 'ok',
@@ -520,6 +536,17 @@ export function validate(plan: Plan): Validation {
             .join(' ')
         : 'Every entered grade is high enough for the requirement it fills.',
   })
+  else
+    checks.push({
+      id: 'min-grades',
+      label: 'Minimum grades',
+      status: 'ok',
+      severity: 'soft',
+      detail:
+        `Specialization courses need a ${RULES.degree.minGradeSpecialization}; free electives need a ` +
+        `${RULES.degree.minGradeCountsTowardDegree}. Turn on grade tracking in settings to check this ` +
+        `against real grades and to see a projected GPA.`,
+    })
 
   /* 10. per-term registration cap */
   const overCap = terms.filter((t) => t.overCap)
@@ -640,7 +667,11 @@ export function validate(plan: Plan): Validation {
     verdict = {
       status: 'ok',
       headline: 'Every degree requirement is met',
-      detail: gpa === null ? 'Enter grades to confirm the GPA requirement.' : `Cumulative GPA ${gpa.toFixed(2)}.`,
+      detail: !trackGrades
+        ? `All ${RULES.degree.totalCourses} courses placed. Specialization courses still need a ${RULES.degree.minGradeSpecialization}.`
+        : gpa === null
+          ? 'Enter grades to confirm the GPA requirement.'
+          : `Cumulative GPA ${gpa.toFixed(2)}.`,
     }
   } else {
     verdict = {
@@ -653,6 +684,7 @@ export function validate(plan: Plan): Validation {
   }
 
   return {
+    trackGrades,
     checks,
     slots,
     freeElectives,

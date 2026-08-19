@@ -6,6 +6,7 @@
  */
 import { COURSES, RULES, SPECIALIZATIONS } from '../src/lib/catalog'
 import { costForTerm, feeCliff } from '../src/lib/cost'
+import { checkCap } from '../src/lib/placement'
 import { emptyPlan } from '../src/lib/plan'
 import { termLabel, timeLimitTerm } from '../src/lib/terms'
 import { validate } from '../src/lib/validate'
@@ -18,9 +19,15 @@ function check(label: string, actual: unknown, expected: unknown) {
   console.log(`${ok ? '  ok  ' : ' FAIL '} ${label}${ok ? '' : `\n         expected ${JSON.stringify(expected)}\n         actual   ${JSON.stringify(actual)}`}`)
 }
 
+/**
+ * Grade tracking defaults OFF in the app, but most scenarios here are about the
+ * grade-dependent rules, so this helper turns it on whenever any entry carries a
+ * grade. Scenarios that specifically exercise the off state build the plan directly.
+ */
 function planWith(entries: [string, TermId, Grade | null][], specialization = 'ai'): Plan {
   const p = emptyPlan()
   p.specialization = specialization
+  p.settings.trackGrades = entries.some(([, , g]) => g !== null)
   for (const [code, term, grade] of entries) {
     p.placements[code.replace(/ /g, '_')] = { code, term, grade }
   }
@@ -267,6 +274,75 @@ console.log('\n— specialization matching (AI) —')
   )
   check('three design-sub-area electives leave the interactive slot open',
     v.slots.filter((s) => s.filledBy).length, 4)
+}
+
+console.log('\n— the cap is enforced at the drop, not just reported —')
+{
+  const p = planWith([['CS 6035', '2026FA', null], ['CS 6750', '2026FA', null]])
+  check('a third Fall course is refused', checkCap(p, 'CS 6601', '2026FA').ok, false)
+  check('  … on the course limit, not the hour limit', checkCap(p, 'CS 6601', '2026FA').limit, 'courses')
+  check('  … and it offers the two courses to swap out',
+    checkCap(p, 'CS 6601', '2026FA').swappable.sort(), ['CS 6035', 'CS 6750'])
+  check('a seminar still fits alongside two courses', checkCap(p, 'CS 8001 OCS', '2026FA').ok, true)
+}
+{
+  const p = planWith([
+    ['CS 6035', '2026FA', null],
+    ['CS 6750', '2026FA', null],
+    ['CS 8001 OCS', '2026FA', null],
+  ])
+  check('a second seminar would break the 7-hour cap', checkCap(p, 'CS 8001 ODA', '2026FA').ok, false)
+  check('  … on hours', checkCap(p, 'CS 8001 ODA', '2026FA').limit, 'hours')
+}
+{
+  const p = planWith([['CS 6035', '2027SU', null]])
+  check('a second Summer course is refused', checkCap(p, 'CS 6750', '2027SU').ok, false)
+  check('a Summer seminar is allowed', checkCap(p, 'CS 8001 OCS', '2027SU').ok, true)
+}
+{
+  const p = planWith([['CS 6035', '2027SU', null], ['CS 8001 OCS', '2027SU', null]])
+  check('Summer fits one course and two seminars', checkCap(p, 'CS 8001 ODA', '2027SU').ok, true)
+  const q = planWith([
+    ['CS 6035', '2027SU', null],
+    ['CS 8001 OCS', '2027SU', null],
+    ['CS 8001 ODA', '2027SU', null],
+  ])
+  check('  … but not three seminars', checkCap(q, 'CS 8001 OLP', '2027SU').ok, false)
+}
+{
+  const p = planWith([['CS 6035', '2026FA', null], ['CS 6750', '2026FA', null]])
+  check('re-placing a course already in the term is a no-op, not a violation',
+    checkCap(p, 'CS 6035', '2026FA').ok, true)
+  check('an empty term accepts anything', checkCap(p, 'CS 6601', '2027SP').ok, true)
+}
+
+console.log('\n— grade tracking off —')
+{
+  const p = emptyPlan()
+  p.settings.trackGrades = false
+  for (const [c, t] of [['CS 6035', '2026FA'], ['CS 6750', '2026FA']] as [string, TermId][]) {
+    p.placements[c.replace(/ /g, '_')] = { code: c, term: t, grade: null }
+  }
+  const v = validate(p)
+  check('the GPA requirement disappears', v.checks.some((c) => c.id === 'gpa'), false)
+  check('the minimum-grade rule becomes an advisory',
+    v.checks.find((c) => c.id === 'min-grades')!.severity, 'soft')
+  check('foundational counts planned courses', check_('foundational', v).status, 'ok')
+  check('  … and says the grade is still required',
+    /needs a B or better/i.test(check_('foundational', v).detail), true)
+  check('no hard requirement is left waiting on data the user opted out of',
+    v.checks.filter((c) => c.severity === 'hard' && c.status === 'pending').map((c) => c.id).includes('gpa'),
+    false)
+}
+{
+  const p = emptyPlan()
+  p.settings.trackGrades = true
+  for (const [c, t] of [['CS 6035', '2026FA'], ['CS 6750', '2026FA']] as [string, TermId][]) {
+    p.placements[c.replace(/ /g, '_')] = { code: c, term: t, grade: null }
+  }
+  const v = validate(p)
+  check('turning it on brings the GPA requirement back', v.checks.some((c) => c.id === 'gpa'), true)
+  check('  … and foundational waits for real grades', check_('foundational', v).status, 'pending')
 }
 
 console.log('\n— GPA, time limit, cost —')

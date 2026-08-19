@@ -1,4 +1,4 @@
-import type { Grade, Plan, Placement, TermId } from '../types'
+import type { Grade, Plan, PlanSettings, Placement, TermId } from '../types'
 import { codeKey, lookup } from './catalog'
 import { compareTerms, termIndex } from './terms'
 
@@ -12,8 +12,17 @@ export const PLAN_KEYS = [
   'targetGraduationTerm',
   'placements',
   'notes',
+  'settings',
   'updatedAt',
 ] as const
+
+export const DEFAULT_SETTINGS: PlanSettings = {
+  // Planning a degree is choosing courses; grades are an outcome you record later.
+  // Starting with this off keeps ten fewer controls off the screen.
+  trackGrades: false,
+  showCost: true,
+  showWorkload: true,
+}
 
 export function emptyPlan(): Plan {
   return {
@@ -23,6 +32,7 @@ export function emptyPlan(): Plan {
     targetGraduationTerm: '2028SU',
     placements: {},
     notes: {},
+    settings: { ...DEFAULT_SETTINGS },
     updatedAt: 0,
   }
 }
@@ -63,6 +73,15 @@ export function normalizePlan(raw: unknown): Plan {
     }
   }
 
+  const rawSettings = (r.settings ?? {}) as Record<string, unknown>
+  const settings: PlanSettings = {
+    trackGrades:
+      typeof rawSettings.trackGrades === 'boolean' ? rawSettings.trackGrades : DEFAULT_SETTINGS.trackGrades,
+    showCost: typeof rawSettings.showCost === 'boolean' ? rawSettings.showCost : DEFAULT_SETTINGS.showCost,
+    showWorkload:
+      typeof rawSettings.showWorkload === 'boolean' ? rawSettings.showWorkload : DEFAULT_SETTINGS.showWorkload,
+  }
+
   return {
     schemaVersion: SCHEMA_VERSION,
     specialization: typeof r.specialization === 'string' ? r.specialization : base.specialization,
@@ -76,6 +95,7 @@ export function normalizePlan(raw: unknown): Plan {
         : null,
     placements,
     notes,
+    settings,
     updatedAt: typeof r.updatedAt === 'number' ? r.updatedAt : 0,
   }
 }

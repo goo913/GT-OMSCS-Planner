@@ -10,7 +10,7 @@
  * so the board renders instantly and keeps working with Firebase unreachable.
  */
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { Grade, Plan, TermId } from '../types'
+import type { Grade, Plan, PlanSettings, TermId } from '../types'
 import { codeKey, lookup } from './catalog'
 import { connect, isConfigured, type PlanDoc } from './firebase'
 import { emptyPlan, normalizePlan } from './plan'
@@ -57,10 +57,13 @@ export interface PlanApi {
   place: (code: string, term: TermId) => void
   remove: (code: string) => void
   setGrade: (code: string, grade: Grade | null) => void
+  /** Remove one course and place another in a single write, so a swap is atomic. */
+  swap: (removeCode: string, addCode: string, term: TermId) => void
   setSpecialization: (id: string) => void
   setMatriculationTerm: (term: TermId) => void
   setTargetGraduationTerm: (term: TermId | null) => void
   setNote: (term: TermId, text: string) => void
+  setSetting: <K extends keyof PlanSettings>(key: K, value: PlanSettings[K]) => void
   replacePlan: (plan: Plan) => void
   resetPlan: () => void
 }
@@ -193,6 +196,7 @@ export function usePlan(): PlanApi {
           ...prev,
           placements: { ...prev.placements },
           notes: { ...prev.notes },
+          settings: { ...prev.settings },
         }
         const patch = fn(draft)
         draft.updatedAt = Date.now()
@@ -242,6 +246,26 @@ export function usePlan(): PlanApi {
     [mutate],
   )
 
+  const swap = useCallback(
+    (removeCode: string, addCode: string, term: TermId) => {
+      if (!lookup(addCode)) return
+      mutate((draft) => {
+        const outKey = codeKey(removeCode)
+        const inKey = codeKey(addCode)
+        delete draft.placements[outKey]
+        const next = {
+          code: addCode,
+          term,
+          grade: draft.placements[inKey]?.grade ?? null,
+          updatedAt: Date.now(),
+        }
+        draft.placements[inKey] = next
+        return { [`placements.${outKey}`]: DELETE, [`placements.${inKey}`]: next }
+      })
+    },
+    [mutate],
+  )
+
   const setSpecialization = useCallback(
     (id: string) =>
       mutate((draft) => {
@@ -282,6 +306,15 @@ export function usePlan(): PlanApi {
     [mutate],
   )
 
+  const setSetting = useCallback(
+    <K extends keyof PlanSettings>(key: K, value: PlanSettings[K]) =>
+      mutate((draft) => {
+        draft.settings = { ...draft.settings, [key]: value }
+        return { [`settings.${key}`]: value }
+      }),
+    [mutate],
+  )
+
   const replacePlan = useCallback((next: Plan) => {
     const normalized = normalizePlan(next)
     setPlan(normalized)
@@ -313,10 +346,12 @@ export function usePlan(): PlanApi {
     place,
     remove,
     setGrade,
+    swap,
     setSpecialization,
     setMatriculationTerm,
     setTargetGraduationTerm,
     setNote,
+    setSetting,
     replacePlan,
     resetPlan,
   }

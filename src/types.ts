@@ -173,6 +173,22 @@ export interface Placement {
   updatedAt?: number
 }
 
+/**
+ * Settings that change what the plan *means*, so they live in the shared document
+ * rather than per-device: both people should see the same verdict. Purely visual
+ * preferences (theme, density) stay in localStorage.
+ */
+export interface PlanSettings {
+  /**
+   * Off by default. When off the app plans courses, not outcomes: no grade inputs,
+   * no GPA requirement, and the minimum-grade rules become advisories on the slots
+   * they apply to rather than pass/fail checks.
+   */
+  trackGrades: boolean
+  showCost: boolean
+  showWorkload: boolean
+}
+
 export interface Plan {
   schemaVersion: number
   specialization: string
@@ -181,5 +197,6 @@ export interface Plan {
   /** keyed by course code with spaces replaced by underscores (Firestore-safe). */
   placements: Record<string, Placement>
   notes: Record<TermId, string>
+  settings: PlanSettings
   updatedAt: number
 }

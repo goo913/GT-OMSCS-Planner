@@ -16,18 +16,22 @@ It opens straight into the plan. No login, no accounts, no setup wizard — see
 
 | | |
 |---|---|
-| **Requirement slots** | The ten slots the degree is made of, laid out by specialization group. Navy = specialization, gold = free elective. Filled slots show the course and the term it sits in. |
-| **Semester board** | One column per term, grouped by academic year, from your matriculation term four years out. Drag on desktop; tap a course then tap a term on a phone. |
+| **Slot rail** | The ten slots the degree is made of, in one row. Navy = specialization, gold = free elective. Click a filled slot to open that course; **click an empty one to filter the library to exactly the courses that can fill it**. |
+| **Semester board** | The primary surface. One card per term with a single line of chrome; everything else — deadlines, workload, half-time status, notes — sits behind the `ⓘ` and `⋯` affordances. Only terms that hold something render, plus one empty term as the next target. |
 | **Graduation validator** | Every rule in `OMSCS_RULES.md` §1–§4, checked live: 30 hours, specialization slots, the foundational requirement *and its term window*, the 6-hour non-CS/CSE cap, the 24-hour CS/CSE floor, projected GPA, per-term registration caps, the six-year limit. Plus soft advisories: term availability, semester workload, recommended background. |
 | **Cost estimator** | Per-semester tuition and Online Learning Fee, a running total, the fee cliff spelled out, and which semesters clear the half-time line for federal loans. Semesters using carried-forward rates are labelled `est`. |
 | **Specialization what-if** | Switch among all six specializations and re-validate the same plan instantly. Courses that stop counting fall visibly into the free electives. |
 | **Pacing** | Earliest possible completion given the per-term caps, feasibility of a target term, and a zero-slack warning when every remaining term runs at the cap. |
 | **Course detail** | Scraped overview, recommended background, instructional team, OMSCentral rating / difficulty / workload / review count, which specializations it serves and in which slot, term availability, and outbound links to the GT page, OMSCentral, syllabi, and preview videos. |
-| **Compare** | Two or three courses side by side. |
+| **Two views** | **Plan** for working (board + library + requirements) and **Summary** for reading — a calm numbered report of verdict, requirements, slot map, semesters, and cost. Summary is what prints. |
+| **Command palette** | `⌘K` / `Ctrl+K` to find and place a course, jump to a term, switch specialization, or flip a setting. |
+| **Settings** | Grade tracking (**off by default**), cost and workload display, target term, density, theme. |
 | **Export / import** | Always-reachable JSON export and import, plus a rolling `localStorage` snapshot after every successful sync. |
 
-Rules produce a verdict, never a block. You can put any course in any term; over-cap terms turn red
-and stay put.
+Rules produce a verdict, not a block — with one exception. The **per-term registration cap is
+enforced at the drop**, because Banner will simply refuse a registration that breaks it, so a plan
+that exceeds it is not a plan. The refusal names the limit and offers to swap a course out. Every
+other rule reports and lets you carry on.
 
 **Not** a registration tool. It does not talk to OSCAR or Banner, and seat counts, waitlists, and
 CRNs are not modelled at all.
@@ -54,11 +58,41 @@ Without `.env.local` the app runs entirely from `localStorage` and the sync pill
 | `npm run dev` | Vite dev server |
 | `npm run build` | Type-check and build to `dist/` |
 | `npm test` | Rule scenarios (`scripts/validate-selftest.ts`) — **run this after any rule or data change** |
-| `npm run test:flows` | Browser flow checks; needs a dev server and `npm i --no-save playwright-core` |
+| `npm run test:flows` | Browser checks for the interface: cap enforcement, the course dialog, grade tracking, the slot rail, sidebars, ⌘K, mobile, and the colour budget. Needs a dev server and `npm i --no-save playwright-core`. Runs offline from localStorage, so it never touches the shared plan. |
 | `npm run test:realtime` | Two-browser Firestore sync checks. **Destructive** — it writes to and clears the shared plan document. Export first. |
 | `npm run lint` | oxlint |
 | `npm run data` | Rebuild `src/data/*.json` from `data/sources/` |
 | `npm run data:refresh` | Re-scrape omscs.gatech.edu and omscentral.com, then rebuild |
+
+---
+
+## Interface
+
+The view layer is [shadcn/ui](https://ui.shadcn.com) on Tailwind v4, with the components under
+`src/components/ui/` (added via the CLI, `components.json` at the root).
+
+**Colour is spent deliberately.** Three hues at rest and no more:
+
+| | |
+|---|---|
+| `neutral` | ~95% of the interface — surfaces, borders, text, inactive states |
+| GT navy `#003057` | the single primary: filled slots, active states, selection |
+| GT gold `#B3A369` | one accent, reserved for specialization identity |
+| `destructive` | **only** when a rule is actually broken |
+
+Difficulty and workload read as neutral *intensity* rather than hue — darker means more. That keeps
+red and green off the screen and makes two courses easier to compare than three coloured bars did.
+`npm run test:flows` asserts the hue budget, so a stray colour fails the build check rather than
+quietly accumulating.
+
+Every number carries an icon or a label, course codes and figures are monospace with `tabular-nums`,
+and no paragraph of explanatory prose is visible on first load — the fee-cliff note, the
+carried-forward-rates note, the half-time note and every rule's full text live in popovers attached
+to the number each one explains.
+
+Layout: a one-line header, the slot rail, then three resizable panes. Either sidebar collapses and
+the board takes the space; widths and collapsed state persist. On a phone the panes become a bottom
+tab bar with full-height sheets, and tap-to-assign is the only placement path.
 
 ---
 
@@ -290,12 +324,24 @@ src/
     terms.ts       term ids, ordering, ranges, the six-year limit
     catalog.ts     merged course + seminar catalog and lookups
     validate.ts    the validator: slot matching and every check
+    placement.ts   the one rule enforced rather than reported: the per-term cap
     cost.ts        tuition, fees, the fee cliff, half-time
     plan.ts        plan shape, normalisation, export/import
     store.ts       usePlan(): localStorage + debounced Firestore sync
     firebase.ts    lazy SDK init. No auth, on purpose.
-  components/      Header, SlotStrip, Library, Board, Validator, CostPanel,
-                   CourseDetail, Compare, AssignBar, Bits
+  hooks/
+    use-prefs.ts   device-local preferences (theme, density, panel state)
+  components/
+    ui/            shadcn/ui primitives, added via the CLI
+    app-header     one line: logo, specialization, view toggle, ⌘K, settings
+    slot-rail      the ten slots; click an empty one to filter the library
+    board          semester cards; one line of chrome, then courses
+    library-panel  search, ToggleGroup filters, two-line course rows
+    requirements-  one line per rule, full text in a popover; cost collapses
+      panel
+    course-dialog  opens from anywhere a course appears
+    summary-view   the read: numbered sections, and what prints
+    command-palette, settings-sheet, metric, logo
 scripts/
   fetch-sources.py   re-scrape every primary source into data/sources/
   build-data.py      data/sources/ + the tuition PDFs -> src/data/
@@ -306,18 +352,21 @@ firestore.rules    one open document, everything else denied
 ```
 
 The validator is pure: `validate(plan)` in, a `Validation` out. It has no React in it and is the
-right place to start reading.
+right place to start reading. `checkCap(plan, code, term)` in `placement.ts` is the only other
+decision-maker — it is what refuses a drop.
 
 ---
 
 ## Accessibility and print
 
-Keyboard-navigable throughout with visible focus rings; the detail sheet is a labelled dialog that
-closes on `Escape`; check statuses carry text equivalents for screen readers; `prefers-reduced-motion`
-is respected. Light and dark themes follow the system, with a manual override in the `⋯` menu.
+Keyboard-navigable throughout with visible focus rings, `Escape` closes every overlay, and `⌘K`
+reaches most of the app without the mouse. Radix primitives carry the dialog, menu, and listbox
+semantics; icons that are not self-evident have tooltips, and icon-only buttons have labels.
+`prefers-reduced-motion` is respected. Light and dark follow the system, with an override in
+Settings.
 
-`⋯ → Print / save PDF` prints the slot strip, the board, the validator, and the cost table on their
-own, without the library or any controls.
+`⋯ → Print summary` switches to the Summary view and prints that — a top-to-bottom report rather
+than a screenshot of a working surface.
 
 ---
 
