@@ -7,7 +7,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6035-introduction-information-security",
-  "overview": "Introduction to Information Security is a graduate-level introductory course in information security. It teaches the basic concepts and principles of information security and the fundamental approaches to secure computers and networks. Its main topics include: security basics; security management and risk assessment; software security; operating systems security; database security; cryptography algorithms and protocols; network authentication and secure network applications; malicious malware; network threats and defenses; web security; mobile security; legal and ethical issues; and privacy.\n--> -->\n-->",
+  "overview": "Introduction to Information Security is a graduate-level introductory course in information security. It teaches the basic concepts and principles of information security and the fundamental approaches to secure computers and networks. Its main topics include: security basics; security management and risk assessment; software security; operating systems security; database security; cryptography algorithms and protocols; network authentication and secure network applications; malicious malware; network threats and defenses; web security; mobile security; legal and ethical issues; and privacy.",
   "background": "Qualifications for taking this class adhere with the Admission Criteria given by Georgia Institute of Technology. Upon entering this class, it is assumed that students have completed an undergraduate degree in computer science or a related field.\nCS 6035 Relevant Technical Information:\n• Basic Information Security Prerequisites\n• Project and Technical Prerequisites",
   "goals": null,
   "team": [
@@ -189,7 +189,7 @@
   "admin": null,
   "formerly": "CS 8803 O12",
   "slug": "cs-6211-system-design-cloud-computing",
-  "overview": "This is a hands on project-intensive immersive course aimed at senior-level undergraduates and graduate students to give them an in-depth experience in developing different layers of a cloud computing infrastructure including software defined networks, distributed runtime systems, network function virtualization, and application development.\nThe course is organized into four project-driven modules (roughly equal duration):\n• Software Defined Networks (SDN)\n• Cloud System Software\n• Network Function Virtualization\n• Cloud Applications\nEach module is organized as discussion of the technical details pertaining to that topic (from selected readings from research papers and other online resources).\nNote that this course will have weekly 90-minute synchronous meetings that must be attended.\nMore information is available on the CS 6211 course website .\n--> -->\n-->",
+  "overview": "This is a hands on project-intensive immersive course aimed at senior-level undergraduates and graduate students to give them an in-depth experience in developing different layers of a cloud computing infrastructure including software defined networks, distributed runtime systems, network function virtualization, and application development.\nThe course is organized into four project-driven modules (roughly equal duration):\n• Software Defined Networks (SDN)\n• Cloud System Software\n• Network Function Virtualization\n• Cloud Applications\nEach module is organized as discussion of the technical details pertaining to that topic (from selected readings from research papers and other online resources).\nNote that this course will have weekly 90-minute synchronous meetings that must be attended.\nMore information is available on the CS 6211 course website .",
   "background": "Students should have completed CS 6210 with a letter grade of A (or high B) or have taken an equivalent course elsewhere before taking this course.",
   "goals": null,
   "team": [
@@ -227,7 +227,7 @@
   "admin": "cybersecurity",
   "formerly": null,
   "slug": "cs-6238-secure-computer-systems",
-  "overview": "Applications and services are supported by software platforms such as operating systems and databases. Secure execution of such applications depends on the trust assumptions that can be made about these systems. By providing right mechanisms for protecting sensitive information and other resources, operating systems and databases can facilitate the development of secure applications. A uniform approach for exploring security support in operating systems and databases is attractive because both types of systems must offer similar mechanisms to mediate access to protected information. This course will take such an approach and it will explore problems such as authentication and access control that are traditionally handled at the system level. Students will also gain in depth understanding of the implementations of mechanisms that address these problems and security policies that can be supported by them. System level security issues in distributed systems will be covered as well.\n--> -->\n-->",
+  "overview": "Applications and services are supported by software platforms such as operating systems and databases. Secure execution of such applications depends on the trust assumptions that can be made about these systems. By providing right mechanisms for protecting sensitive information and other resources, operating systems and databases can facilitate the development of secure applications. A uniform approach for exploring security support in operating systems and databases is attractive because both types of systems must offer similar mechanisms to mediate access to protected information. This course will take such an approach and it will explore problems such as authentication and access control that are traditionally handled at the system level. Students will also gain in depth understanding of the implementations of mechanisms that address these problems and security policies that can be supported by them. System level security issues in distributed systems will be covered as well.",
   "background": "• An undergraduate operating systems course (Georgia Tech's course CS 3210 Design of Operating Systems or equivalent).\n• System programming experience with the C programming language is highly desirable.\n• Programming experience with Python.",
   "goals": "After completing the course, the students should have the following capabilities:\n• Demonstrate the need for a trusted computing base (TCB) and how it helps protect resources in a computer system.\n• Analyze how hardware supported memory protection enables isolation of TCB and of untrusted programs.\n• Develop, implement and evaluate authentication and access control in computer systems.\n• Understand and evaluate security in distributed systems.\n• Apply security concepts to protect data stored in database systems.\n• Be familiar with recent research related to topics covered in class.",
   "team": [
@@ -323,7 +323,7 @@
   "admin": "cybersecurity",
   "formerly": null,
   "slug": "cs-6260-applied-cryptography",
-  "overview": "A graduate-level introduction to modern cryptography, which focuses on the classical goals of cryptography, such as data privacy, authenticity and integrity.\n--> -->\n-->",
+  "overview": "A graduate-level introduction to modern cryptography, which focuses on the classical goals of cryptography, such as data privacy, authenticity and integrity.",
   "background": "No previous knowledge of cryptography is necessary. This course is about applying theory to practical problems, but it is still a theory course. The main requirement is basic \"mathematical maturity\". You have to be able to read and write mathematical definitions, statements and proofs.\nIt is expected that you were successful in your undergraduate discrete math class and took basic algorithms and computability/complexity theory classes. In particular, you have to know how to measure the running time of an algorithm and how to do proofs by contradiction and contraposition. You also have to know the basics of probability theory and modular arithmetic. You should also have familiarity with Python for the coding portions of the course.\nIf you cannot recall what terms like permutation, sample space, random variable, conditional probability, big-O notation mean, you should consider taking the course in a later semester and refresh your knowledge of the above topics in the meanwhile. I recommend you review an undergraduate textbook on discrete math.\nAll necessary elements of number theory will be presented during the course.",
   "goals": "You will learn various cryptographic schemes and how they are used in practice. For example, you will learn what AES, CBC, RSA, DSA, TLS stand for and how they \"work\". But the main objectives are more fundamental. The goals are to build the understanding of what \"secure\" is and how to evaluate and measure security. You will also learn how to compare security of various schemes, and how to select parameters to achieve required security guarantees. Note that you will not be learning the internal details of block ciphers or how to build/implement them.",
   "team": [
@@ -367,7 +367,7 @@
   "admin": "cybersecurity",
   "formerly": "CS 8803 O22",
   "slug": "cs-6261-security-operations-and-incident-response",
-  "overview": "This course provides students with the background information and skill sets necessary to participate in and lead a cyber security incident response effort.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.\n--> -->\n-->",
+  "overview": "This course provides students with the background information and skill sets necessary to participate in and lead a cyber security incident response effort.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.",
   "background": "Students should have some familiarity with system logs and log analysis tools like Splunk. Students should also have an understanding of how computer systems and networks function.",
   "goals": "Once completed, the students should have the following capabilities:\n• Understand the foundational tools necessary to have a successful incident response program.\n• Understand modern incident response methods and apply those methods to create an incident response process.\n• Observe suspicious IT behavior and discern malicious activity.\n• Apply methods of containing, eradicating, and responding to an emerging cybersecurity threat.\n• Evaluate performance of a prior incident in order to improve future processes.",
   "team": [
@@ -616,7 +616,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6290-high-performance-computer-architecture",
-  "overview": "This course covers modern computer architecture, including branch prediction, out-of-order instruction execution, cache optimizations, multi-level caches, memory and storage, cache coherence and consistency, and multi- and many-core processors.\n--> -->\n-->",
+  "overview": "This course covers modern computer architecture, including branch prediction, out-of-order instruction execution, cache optimizations, multi-level caches, memory and storage, cache coherence and consistency, and multi- and many-core processors.",
   "background": "• Undergraduate computer architecture course that covers basic computer organization\n• Working knowledge of topics such as instruction sets, pipelining, etc.\n• Familiarity with C/C++ and Linux, and confidence with making modifications to large programs (for the course project)\nIf you answer \"no\" to any of the following questions, it may be beneficial to refresh your knowledge of the prerequisite material prior to taking CS 6290:\n• Have you taken a computer organization course before?\n• Are you familiar with at least one RISC instruction set and would you feel comfortable reading and writing small assembler programs?\n• Are you familiar with basic computer architecture concepts, such as pipelines and caches?\n• Are you familiar with C/C++ and would you be comfortable writing and/or modifying 100+ lines of code in a program that has over 100,000 lines of code?\n• Are you comfortable with, or even excited about, learning how real processors work and using simulation to see how changes in processor design affect its performance?",
   "goals": "After taking this course, students should be able to:\n• Confidently discuss key ideas and elements of modern computer architectures, including branch prediction, out-of-order execution, cache optimizations, multi-level caches, memory, storage, reliability/availability, multi-core processors, cache coherence and consistency, and long-term and recent trends in computer architecture.\n• Apply knowledge of these concepts during software design and development, to improve program performance, and during hardware architecture design, to create systems that are well suited for their intended purpose.\n• Comprehend explanations of more advanced concepts, including those presented in research literature.",
   "team": [
@@ -708,7 +708,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6300-software-development-process",
-  "overview": "This course provides an in-depth study of the process of developing software systems, including: the use of software processes in actual product development; techniques used to ensure quality of the software products; and maintenance tasks performed as software evolves. By the end of the course, students will understand the role of software processes in the development of software and will have experienced several types of processes, from rigid to agile. Students will also become familiar with a variety of modern technologies and development techniques and understand their connection to software processes.\n--> -->\n-->",
+  "overview": "This course provides an in-depth study of the process of developing software systems, including: the use of software processes in actual product development; techniques used to ensure quality of the software products; and maintenance tasks performed as software evolves. By the end of the course, students will understand the role of software processes in the development of software and will have experienced several types of processes, from rigid to agile. Students will also become familiar with a variety of modern technologies and development techniques and understand their connection to software processes.",
   "background": "Students should be familiar with Java and with basic software engineering concepts. Students are also expected to have taken an undergraduate software engineering course or have some experience in industry.\nIf you answer \"no\" to any of the following questions, it may be beneficial to refresh your knowledge of this material prior to taking CS 6300:\n• Have you taken a software engineering course before or have you had some experience working as a software engineer in a company?\n• Are you familiar with basic software engineering concepts, such as requirements, software design, and software testing?\n• Are you familiar with the Java language? (Knowing another object-oriented language, such as C++ or C#, may be enough, but please keep in mind that all assignments and projects are Java-based.)\n• Are you comfortable, or even excited about, learning new technologies and working with software tools?\n• Do you have enough flexibility to work with a team that meets (remotely) on a regular basis?",
   "goals": null,
   "team": [
@@ -935,7 +935,7 @@
   "admin": null,
   "formerly": "CS 8803 O16",
   "slug": "cs-6435-digital-health-equity",
-  "overview": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities. Using this knowledge as a foundation, the course examines how digital health technologies can be designed to achieve health equity, and how the varied influences on health shape access to, utilization of, and impact of digital health systems.\nStudents will learn how to apply theory, empirical insights, and perspectives from the social, behavioral, and public health sciences in the design and evaluation of digital health systems that address the disproportionate barriers to health and poor health outcomes experienced by marginalized and underserved populations. Foundations of public health will be examined, including prevention and the prevention paradox, public health ethics, behavioral theories, and social determinants of health. Additionally, the course will have a central focus on applying human-centered design concepts to the domain of digital health equity. The course will examine various ways in which technology can be employed to reduce health disparities, such as thorough education, intervention, and collective action, and discuss the relative effectiveness of these approaches. The course includes a mixture of individual and group assignments.\nStudents will complete papers, design assignments, discussion prompts, a debate activity, and a semester-long team project in which they will research a health equity issue, and design a software solution to address that issue.\n--> -->\n-->",
+  "overview": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities. Using this knowledge as a foundation, the course examines how digital health technologies can be designed to achieve health equity, and how the varied influences on health shape access to, utilization of, and impact of digital health systems.\nStudents will learn how to apply theory, empirical insights, and perspectives from the social, behavioral, and public health sciences in the design and evaluation of digital health systems that address the disproportionate barriers to health and poor health outcomes experienced by marginalized and underserved populations. Foundations of public health will be examined, including prevention and the prevention paradox, public health ethics, behavioral theories, and social determinants of health. Additionally, the course will have a central focus on applying human-centered design concepts to the domain of digital health equity. The course will examine various ways in which technology can be employed to reduce health disparities, such as thorough education, intervention, and collective action, and discuss the relative effectiveness of these approaches. The course includes a mixture of individual and group assignments.\nStudents will complete papers, design assignments, discussion prompts, a debate activity, and a semester-long team project in which they will research a health equity issue, and design a software solution to address that issue.",
   "background": null,
   "goals": null,
   "team": [
@@ -995,8 +995,8 @@
    }
   ],
   "iconSpecRoles": {
-   "hci": "elective",
-   "ai": "elective"
+   "ai": "elective",
+   "hci": "elective"
   },
   "iconFlags": [
    "foundational"
@@ -1010,7 +1010,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6457-video-game-design",
-  "overview": "Welcome to CS6457 Video Game Design. The course covers many game design topics including game engine concepts and technologies, structural elements of games, and game design process.\nCS6457 is a project-based course and includes both individual assignments as well as a group project. Learning objectives are focused primarily on creating fully three-dimensional games with real time game object control. This includes games that meet the criteria of Game Feel such as Super Mario 64.\n--> -->\n-->",
+  "overview": "Welcome to CS6457 Video Game Design. The course covers many game design topics including game engine concepts and technologies, structural elements of games, and game design process.\nCS6457 is a project-based course and includes both individual assignments as well as a group project. Learning objectives are focused primarily on creating fully three-dimensional games with real time game object control. This includes games that meet the criteria of Game Feel such as Super Mario 64.",
   "background": "Students are not expected to be familiar with the Unity Engine. Outside of C# experience, familiarity with a strongly typed object-oriented programming language such as Java is helpful.\nUseful prerequisite knowledge for the course includes linear algebra and computer graphics basics. Understanding of affine transformations of homogeneous coordinates, transformation order, quaternions, 3D projection, matrix stacks, scene graphs, graphics lighting models such as the Phong reflection model, are all relevant.",
   "goals": null,
   "team": [
@@ -1046,7 +1046,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6460-educational-technology",
-  "overview": "CS 6460: Educational Technology will be a heavily project-based class in which students will: deeply investigate the tools, methods, and theories behind educational technology; demonstrate mastery of a subset of the field; propose either implementing a tool for or conducting research in educational technology; and deliver a final project along with a presentation and publication-ready paper.\nJust as the on-campus course has no lectures, so also the online course will not be lecture-based; instead, the course will be based on a curated library of materials, such as academic publications, media articles, existing tools, past projects, original interviews with experts in the field. Students in the class will navigate and investigate the topics most pertinent to their interests and project ideas, as well as contribute to the library for future classes. As part of this, TAs, acting more as mentors, will work closely with small groups of students to develop their understanding and ideas, scope their plans, and deliver a final project.\nThe ultimate goal is that these projects will lead to academic publications, start-up businesses, ongoing research projects, or tools to use in the OMSCS program.\nMore information is available on the CS 6460 course website .\n--> -->\n-->",
+  "overview": "CS 6460: Educational Technology will be a heavily project-based class in which students will: deeply investigate the tools, methods, and theories behind educational technology; demonstrate mastery of a subset of the field; propose either implementing a tool for or conducting research in educational technology; and deliver a final project along with a presentation and publication-ready paper.\nJust as the on-campus course has no lectures, so also the online course will not be lecture-based; instead, the course will be based on a curated library of materials, such as academic publications, media articles, existing tools, past projects, original interviews with experts in the field. Students in the class will navigate and investigate the topics most pertinent to their interests and project ideas, as well as contribute to the library for future classes. As part of this, TAs, acting more as mentors, will work closely with small groups of students to develop their understanding and ideas, scope their plans, and deliver a final project.\nThe ultimate goal is that these projects will lead to academic publications, start-up businesses, ongoing research projects, or tools to use in the OMSCS program.\nMore information is available on the CS 6460 course website .",
   "background": "To be ready for the class, students should have completed their program foundational requirement in order to have experience on the receiving end of educational technology. Students should also be comfortable with writing a handful of essays, participating in group activities and discussions, and tackling a large-scale individual or group project.\nTo succeed in this course, you should be able to answer “yes” to the following questions:\n• Have you completed the program's foundational requirement? (While not required, answering 'yes' guarantees you'll have examples of educational technology to think about in the course.)\n• Are you comfortable with a class where participation is assessed directly?\n• Are you comfortable with a class that involves a significant amount of essay writing?\n• Are you comfortable either in a group on a project, or taking on a significantly-sized project individually?\n• Are you passionate about education or educational technology? Do you already have some vague ideas of the kinds of things you'd like to research or build?\n• Are you comfortable with a very open-ended class, where learning is largely student-driven?",
   "goals": null,
   "team": [
@@ -1064,8 +1064,8 @@
   ],
   "syllabi": [],
   "iconSpecRoles": {
-   "hci": "elective",
-   "ai": "elective"
+   "ai": "elective",
+   "hci": "elective"
   },
   "iconFlags": [
    "foundational"
@@ -1079,7 +1079,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6475-computational-photography",
-  "overview": "This class explores how computation impacts the entire workflow of photography, which is traditionally aimed at capturing light from a (3D) scene to form a (2D) image. A detailed study of the perceptual, technical and computational aspects of forming pictures, and more precisely, the capture and depiction of reality on a (mostly 2D) medium of images, is undertaken over the entire term. The scientific, perceptual, and artistic principles behind image-making will be emphasized, especially as impacted and changed by computation. Topics include the relationship between pictorial techniques and the human visual system; intrinsic limitations of 2D representations and their possible compensations; and technical issues involving capturing light to form images. Technical aspects of image capture and rendering, and exploration of how such a medium can be used to its maximum potential, will be examined. New forms of cameras and imaging paradigms will be introduced. Students will undertake a hands-on approach over the entire term using computation techniques, merged with digital imaging processes to produce photographic artifacts.\nMore information is available on the CS 6475 course website .\n--> -->\n-->",
+  "overview": "This class explores how computation impacts the entire workflow of photography, which is traditionally aimed at capturing light from a (3D) scene to form a (2D) image. A detailed study of the perceptual, technical and computational aspects of forming pictures, and more precisely, the capture and depiction of reality on a (mostly 2D) medium of images, is undertaken over the entire term. The scientific, perceptual, and artistic principles behind image-making will be emphasized, especially as impacted and changed by computation. Topics include the relationship between pictorial techniques and the human visual system; intrinsic limitations of 2D representations and their possible compensations; and technical issues involving capturing light to form images. Technical aspects of image capture and rendering, and exploration of how such a medium can be used to its maximum potential, will be examined. New forms of cameras and imaging paradigms will be introduced. Students will undertake a hands-on approach over the entire term using computation techniques, merged with digital imaging processes to produce photographic artifacts.\nMore information is available on the CS 6475 course website .",
   "background": "The course will involve programming assignments and projects that will test the student’s understanding of the concepts taught in class. The following will be necessary to keep up with the pace of the course:\n• W orking knowledge of computer programming (preferably Python)\n• College-level mathematics (knowledge of matrices, vectors, differentiation, and integration)\n• Physics (vectors, optics)\n• Probability (probability density functions)\n• Basic knowledge about the functioning of a camera (controlling shutter speed, ISO, aperture)\n• Prior experience with using OpenCV and Numpy is preferable",
   "goals": "This class explores how computation impacts the entire workflow of photography, which is traditionally aimed at capturing light from a (3D) scene to form an (2D) image. Over the span of the semester, students will learn:\n• To think about images as multi-dimensional arrays on which mathematical operations can be performed to generate interesting artifacts\n• The technical aspects of image capture and rendering, and exploration of how such a medium can be used to its maximum potential\n• To mathematically model a camera as a device that maps a 3D space onto a 2D plane\n• How the traditional camera pipeline can be transformed by changing the sensor, illumination, lens, etc.",
   "team": [
@@ -1148,8 +1148,8 @@
   "syllabi": [],
   "iconSpecRoles": {
    "cpr": "elective",
-   "ml": "elective",
-   "cg": "elective"
+   "cg": "elective",
+   "ml": "elective"
   },
   "iconFlags": [
    "foundational"
@@ -1163,7 +1163,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6491-foundations-computer-graphics",
-  "overview": "This course explores the mathematical, physical, and perceptual principles behind computer graphics, focusing on techniques for creating, representing, and displaying three dimensional shapes and their properties. Designed for students with diverse backgrounds, the course includes a brief review of fundamental concepts in computer graphics.\nThe curriculum covers both Image Synthesis and Modeling. The first half of the course focuses on Image Synthesis, with an emphasis on the principles and implementation of Ray Tracing. The second half transitions to various techniques in 3D Modeling.\nThis course balances foundational concepts with advanced topics, offering a comprehensive introduction to the field of computer graphics at the graduate level.\n--> -->\n-->",
+  "overview": "This course explores the mathematical, physical, and perceptual principles behind computer graphics, focusing on techniques for creating, representing, and displaying three dimensional shapes and their properties. Designed for students with diverse backgrounds, the course includes a brief review of fundamental concepts in computer graphics.\nThe curriculum covers both Image Synthesis and Modeling. The first half of the course focuses on Image Synthesis, with an emphasis on the principles and implementation of Ray Tracing. The second half transitions to various techniques in 3D Modeling.\nThis course balances foundational concepts with advanced topics, offering a comprehensive introduction to the field of computer graphics at the graduate level.",
   "background": null,
   "goals": null,
   "team": [
@@ -1243,10 +1243,10 @@
    }
   ],
   "iconSpecRoles": {
-   "cg": "core",
-   "ml": "core",
    "cs": "core",
    "cpr": "core",
+   "ml": "core",
+   "cg": "core",
    "ai": "core"
   },
   "iconFlags": [
@@ -1261,7 +1261,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-6601-artificial-intelligence",
-  "overview": "Students should be familiar with college-level mathematical concepts (calculus, analytic geometry, linear algebra, and probability) and computer science concepts (algorithms, O notation, data structures). In addition to this, students should have working knowledge of computer programming; the course will focus on using Python for its programming assignments.\n--> -->\n-->",
+  "overview": "Students should be familiar with college-level mathematical concepts (calculus, analytic geometry, linear algebra, and probability) and computer science concepts (algorithms, O notation, data structures). In addition to this, students should have working knowledge of computer programming; the course will focus on using Python for its programming assignments.",
   "background": "You should have completed undergraduate computer algorithm and data structures courses that cover O notation, time and space constraints. You should have working knowledge of college level mathematics such as calculus, probability, and linear algebra. You will also need to be familiar with Python and be comfortable making modifications to large programs.\nPlease review the following questions, if you answer “no” to any of them you may want to refresh your knowledge or practice the required skills prior to taking the class:\n• Are you comfortable programming in Python, including IPython notebooks? If not, are you comfortable in learning a language within the first week of class?\n• Have you taken several classes that required intensive programming?\n• Have you taken algorithms and data structures courses?\n• Are you prepared to spend at least 9 hours a week on this class?\n• Are you proficient in the basic concepts of linear algebra, probability, and single/multi-variable calculus?",
   "goals": null,
   "team": [
@@ -1475,8 +1475,8 @@
   ],
   "syllabi": [],
   "iconSpecRoles": {
-   "hci": "core",
-   "ai": "elective"
+   "ai": "elective",
+   "hci": "core"
   },
   "iconFlags": [
    "foundational"
@@ -1523,8 +1523,8 @@
    }
   ],
   "iconSpecRoles": {
-   "hci": "elective",
-   "ai": "elective"
+   "ai": "elective",
+   "hci": "elective"
   },
   "iconFlags": [
    "foundational"
@@ -1649,8 +1649,8 @@
    }
   ],
   "iconSpecRoles": {
-   "cs": "elective",
-   "ml": "elective"
+   "ml": "elective",
+   "cs": "elective"
   },
   "iconFlags": [
    "foundational"
@@ -1750,7 +1750,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-7470-mobile-ubiquitous-computing",
-  "overview": "Mobile and ubiquitous computing are often referred to as the third generation of computing where humans continuously interact not with just one but many computing devices. The latter are thereby embedded into the everyday environment of their users in such a way that users may not even be aware of their interaction with computers. In this class, students will explore this third generation of computing that enables such ubiquitous computing. Students will learn about the technical foundations of sensing, computing, and communication that are the prerequisite for smooth and seamless interactions in a continuous manner. Based on these foundations, students will work on practical projects that address cutting edge real-world problems and will develop innovative solutions to them through means of mobile and ubiquitous computing. Beyond providing a solid technical foundation for mobile and ubiquitous computing, the course will focus on aspects of how to actually build and deploy mobile and ubiquitous computing systems.\n--> -->\n-->",
+  "overview": "Mobile and ubiquitous computing are often referred to as the third generation of computing where humans continuously interact not with just one but many computing devices. The latter are thereby embedded into the everyday environment of their users in such a way that users may not even be aware of their interaction with computers. In this class, students will explore this third generation of computing that enables such ubiquitous computing. Students will learn about the technical foundations of sensing, computing, and communication that are the prerequisite for smooth and seamless interactions in a continuous manner. Based on these foundations, students will work on practical projects that address cutting edge real-world problems and will develop innovative solutions to them through means of mobile and ubiquitous computing. Beyond providing a solid technical foundation for mobile and ubiquitous computing, the course will focus on aspects of how to actually build and deploy mobile and ubiquitous computing systems.",
   "background": null,
   "goals": null,
   "team": [
@@ -1791,7 +1791,7 @@
    }
   ],
   "iconSpecRoles": {
-   "hci": "elective"
+   "hci": "core"
   },
   "iconFlags": [
    "foundational"
@@ -1848,7 +1848,7 @@
   "admin": null,
   "formerly": null,
   "slug": "cs-7632-game-ai",
-  "overview": "Welcome to CS 7632 Game AI.\nAs applied to video game development, Artificial Intelligence serves a different purpose than general AI research. This is due to the fact that general AI is often concerned with finding a correct and/or optimal answer. However, the goal of Game AI is to simply provide a fun gameplay experience. Because of this, Game AI solutions may involve cutting corners, tricking the game player, or otherwise cheating in regard to implementation. Game AI also faces the challenge of limited computational resources as video games involve a lot of subsystems that must work in coordination such as graphics, sound, physics simulation, etc. Game AI is often a lower priority in this list of game features and further motivates the corner cutting strategies.\nWhile Game AI generally leverages concepts from classic AI research, you will see that there are many unique implementation strategies for achieving a fun game play experience. The Game AI course covers topics including agent movement, path planning, decision making, goal-oriented behavior, learning, and procedural content generation.\n--> -->\n-->",
+  "overview": "Welcome to CS 7632 Game AI.\nAs applied to video game development, Artificial Intelligence serves a different purpose than general AI research. This is due to the fact that general AI is often concerned with finding a correct and/or optimal answer. However, the goal of Game AI is to simply provide a fun gameplay experience. Because of this, Game AI solutions may involve cutting corners, tricking the game player, or otherwise cheating in regard to implementation. Game AI also faces the challenge of limited computational resources as video games involve a lot of subsystems that must work in coordination such as graphics, sound, physics simulation, etc. Game AI is often a lower priority in this list of game features and further motivates the corner cutting strategies.\nWhile Game AI generally leverages concepts from classic AI research, you will see that there are many unique implementation strategies for achieving a fun game play experience. The Game AI course covers topics including agent movement, path planning, decision making, goal-oriented behavior, learning, and procedural content generation.",
   "background": "It is strongly recommended that students take CS 6601: Artificial Intelligence prior to taking this course.\nStudents are expected to be familiar with basic computer science concepts such as algorithms and data structures. Students should also have a strong background in software development.\nStudents are not expected to be familiar with the Unity Engine. For those not already familiar with C#, familiarity with a strongly typed object-oriented programming language such as Java is helpful.",
   "goals": null,
   "team": [
@@ -1977,7 +1977,7 @@
   "admin": null,
   "formerly": "CS 8803 O09",
   "slug": "cs-7639-cyber-physical-design-and-analysis",
-  "overview": "Cyber-physical systems are systems comprising both a physical part and a software part, whereby the physical part of the system sends information about itself to the software part, and the software sends information, usually in the form of commands, to the physical part. The development of cyber-physical systems, therefore, requires knowing a mix of competencies relative to physical systems, on the one hand, and software systems, on the other hand. Because physical systems have \"a life of their own\", and they can often harm operators (think airplanes, medical devices, or cars) and/or cost a fortune to repair (think power grid and centrifuges), the development of programs that control these systems cannot rely much on \"trial and error\". This course introduces the tools and models that will allow attendees to develop high confidence in the resulting system's proper operation prior to any operational test. Included are tools for model-based systems engineering, and cyber-physical system verification and validation currently in use by the CPS industry. Numerous examples will be considered, from aerospace, automotive, medical devices, etc. The frequent presence of human operators is also acknowledged and discussed in-depth . Various verification and validation formalisms (formal methods) are described and applied to simple examples.\nMore information can be found on the CS 7639 course website .\n--> -->\n-->",
+  "overview": "Cyber-physical systems are systems comprising both a physical part and a software part, whereby the physical part of the system sends information about itself to the software part, and the software sends information, usually in the form of commands, to the physical part. The development of cyber-physical systems, therefore, requires knowing a mix of competencies relative to physical systems, on the one hand, and software systems, on the other hand. Because physical systems have \"a life of their own\", and they can often harm operators (think airplanes, medical devices, or cars) and/or cost a fortune to repair (think power grid and centrifuges), the development of programs that control these systems cannot rely much on \"trial and error\". This course introduces the tools and models that will allow attendees to develop high confidence in the resulting system's proper operation prior to any operational test. Included are tools for model-based systems engineering, and cyber-physical system verification and validation currently in use by the CPS industry. Numerous examples will be considered, from aerospace, automotive, medical devices, etc. The frequent presence of human operators is also acknowledged and discussed in-depth . Various verification and validation formalisms (formal methods) are described and applied to simple examples.\nMore information can be found on the CS 7639 course website .",
   "background": null,
   "goals": null,
   "team": [
@@ -2055,9 +2055,9 @@
    }
   ],
   "iconSpecRoles": {
+   "ml": "core",
    "cpr": "core",
-   "ai": "core",
-   "ml": "core"
+   "ai": "core"
   },
   "iconFlags": [
    "foundational"
@@ -2265,8 +2265,8 @@
    }
   ],
   "iconSpecRoles": {
-   "cpr": "elective",
    "ai": "elective",
+   "cpr": "elective",
    "ml": "elective"
   },
   "iconFlags": [
@@ -2750,7 +2750,7 @@
   "admin": "cybersecurity",
   "formerly": null,
   "slug": "ece-8843-side-channels-and-their-role-cybersecurity",
-  "overview": "The primary objective of this course is to provide an in-depth treatment of digital and analog side-channels and their use for attacks and defenses in cyber security. Upon completion of the course, the student will have a high degree of confidence in discussing the fundamental mechanisms of side-channel creation, analysis, and application to various cybersecurity problems, and have competence in considering these mechanisms during software and hardware development.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.\n--> -->\n-->",
+  "overview": "The primary objective of this course is to provide an in-depth treatment of digital and analog side-channels and their use for attacks and defenses in cyber security. Upon completion of the course, the student will have a high degree of confidence in discussing the fundamental mechanisms of side-channel creation, analysis, and application to various cybersecurity problems, and have competence in considering these mechanisms during software and hardware development.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.",
   "background": "Suggested prerequisites are graduate standing and some background in high performance computer architecture (e.g. ECE 4100/6100). Students should also be able to modify existing programs and write new programs in C/C++.",
   "goals": "As part of this course, students:\n• Will gain an insight into side-channels, how they are created and used in cybersecurity\n• Will learn and practice how to exploit digital and analog side-channels for cybersecurity\n• Will learn and practice how to analyze side-channels for program monitoring and supply chain verification\nOnce completed, students should have the following capabilities:\n• A high degree of confidence and competence in discussing the fundamental mechanisms of side-channel creation, analysis\n• A high degree of confidence and competence in applying side-channels to various cybersecurity problems",
   "team": [
@@ -2791,7 +2791,7 @@
   "admin": "cybersecurity",
   "formerly": null,
   "slug": "inta-6450-data-analytics-and-security",
-  "overview": "This course explores the foundations of big data and data analytics, including its foundations in computing technology and statistics. It explores the nature of underlying technical challenges and statistical assumptions used to understand relationships in a variety of applied fields, with a focus on the fields of fraud detection and communication monitoring. Engages with the social implications of increased knowledge, surveillance, and behavioral prediction made possible by big data, and the ethical tradeoffs faced. While the course includes an analytics project, no prior technical experience is required.\n[Update: New Data Analytics Project on Industry Data]\nThe course has a data partnership with the mobile app security company NowSecure. This partnership, which will require students to sign an NDA, allows students to develop and hone their data analytics skills on real world cybersecurity data.\nNowSecure scans all Android and iOS apps available on public app stores in by performing automated using static, dynamic, interactive and API Security testing code analysis as well as dynamic tooling. The dynamic tools involve running each app through a series of automated actions on actual phone hardware and recording detailed logs and results across a variety of components.\nINTA 6450 students can choose to complete a course project using data analytics to find new security vulnerabilities and/or patterns in vulnerabilities across real apps. Students will gain detailed, hands-on experience with a fast growing part of cybersecurity - mobile app security. They can potentially find real and important security vulnerabilities affecting the apps installed on millions of devices.\nStudents choosing to work on these projects will have the opportunity to ask questions and get feedback from NowSecure professionals on everything from data definitions to issues, challenges, and extensions related to their project.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.\n--> -->\n-->",
+  "overview": "This course explores the foundations of big data and data analytics, including its foundations in computing technology and statistics. It explores the nature of underlying technical challenges and statistical assumptions used to understand relationships in a variety of applied fields, with a focus on the fields of fraud detection and communication monitoring. Engages with the social implications of increased knowledge, surveillance, and behavioral prediction made possible by big data, and the ethical tradeoffs faced. While the course includes an analytics project, no prior technical experience is required.\n[Update: New Data Analytics Project on Industry Data]\nThe course has a data partnership with the mobile app security company NowSecure. This partnership, which will require students to sign an NDA, allows students to develop and hone their data analytics skills on real world cybersecurity data.\nNowSecure scans all Android and iOS apps available on public app stores in by performing automated using static, dynamic, interactive and API Security testing code analysis as well as dynamic tooling. The dynamic tools involve running each app through a series of automated actions on actual phone hardware and recording detailed logs and results across a variety of components.\nINTA 6450 students can choose to complete a course project using data analytics to find new security vulnerabilities and/or patterns in vulnerabilities across real apps. Students will gain detailed, hands-on experience with a fast growing part of cybersecurity - mobile app security. They can potentially find real and important security vulnerabilities affecting the apps installed on millions of devices.\nStudents choosing to work on these projects will have the opportunity to ask questions and get feedback from NowSecure professionals on everything from data definitions to issues, challenges, and extensions related to their project.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.",
   "background": "This course requires no specific background knowledge. Many students with no programming background and no background in statistics have found this class approachable and learned a lot. At the same time, upper level PhD students in economics and undergrad/masters students in a range of subjects at Georgia Tech who have modest to considerable computing skills have also benefited from the wide-ranging survey of data analytic methods, the open ended project work, and the discussions around how data analytics fit into problems related to security and society.",
   "goals": "Once completed, you should have the following capabilities:\n• Familiarity and exposure\n• Demonstrate familiarity with hardware trends underlying the rise of big data\n• Demonstrate familiarity with software trends underlying the rise of big data\n• List specific links between big data technologies that affect our security as a society\n• Reasoning about computing technology and about models\n• Articulate a strategy for defining and algorithmic finding a specific type of wrongdoing\n• Identify problems that technologies will likely solve in the future\n• Identify problems that technologies likely can't solve in the future\n• Technical execution of code\n• Use R programming language to perform statistical analysis\n• Use Python to find the most common words in a book\n• Use Python to query an email database\n• Use Python to algorithmically identify emails of interest",
   "team": [
@@ -2954,7 +2954,7 @@
   "admin": "analytics",
   "formerly": null,
   "slug": "isye-6501-intro-analytics-modeling",
-  "overview": "Analytical models are key to understanding data, generating predictions, and making business decisions. Without models, it’s nearly impossible to gain insights from data. In modeling, it’s essential to understand how to choose the right data sets, algorithms, techniques, and formats to solve a particular business problem.\nIn this course, you’ll gain an intuitive understanding of fundamental models and methods of analytics and practice how to implement them using common industry tools like R. You’ll learn about analytics modeling and how to choose the right approach from among the wide range of options in your toolbox.\nYou will learn how to use statistical models and machine learning as well as models for:\n• classification\n• clustering\n• change detection\n• data smoothing\n• validation\n• prediction\n• optimization\n• experimentation\n• decision making\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.\n--> -->\n-->",
+  "overview": "Analytical models are key to understanding data, generating predictions, and making business decisions. Without models, it’s nearly impossible to gain insights from data. In modeling, it’s essential to understand how to choose the right data sets, algorithms, techniques, and formats to solve a particular business problem.\nIn this course, you’ll gain an intuitive understanding of fundamental models and methods of analytics and practice how to implement them using common industry tools like R. You’ll learn about analytics modeling and how to choose the right approach from among the wide range of options in your toolbox.\nYou will learn how to use statistical models and machine learning as well as models for:\n• classification\n• clustering\n• change detection\n• data smoothing\n• validation\n• prediction\n• optimization\n• experimentation\n• decision making\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.",
   "background": "• Probability and statistics\n• Basic programming proficiency\n• Linear algebra\n• Basic calculus\nA little background in R can also be useful, but it isn’t necessary if you’re willing to learn on the fly.",
   "goals": "The most important thing you can learn from this course is not the memorization of any specific bit of material. Instead, I would like you to learn these skills:\n• Given a business (or other) question, select an appropriate analytics model to answer it, specify the data you will need to solve it, and understand what the model’s solution will and will not provide as an answer.\n• Given someone else’s use of analytics to address a specific business (or other) question, evaluate whether they have used an appropriate model (and appropriate data) and whether their conclusion is reasonable.\nAnother goal of this course is for you to learn how to think though descriptions and usage of new models, so you can continue to learn throughout your career. New techniques will certainly be developed after you graduate, and we want you to be able to pick them up quickly.\nWe will not cover the mathematics and algorithms under the hood, or deeper mastery of the modeling needed to set up the use of the technique. You can acquire those deeper levels of knowledge in elective courses. (In fact, we could spend an entire semester on many of the topics you’ll see in the course.)",
   "team": [
@@ -3093,7 +3093,7 @@
   "admin": "analytics",
   "formerly": null,
   "slug": "isye-6669-deterministic-optimization",
-  "overview": "The course will teach basic concepts, models, and algorithms in linear optimization, integer optimization, and convex optimization. The first module of the course is a general overview of key concepts in optimization and associated mathematical background. The second module of the course is on linear optimization, covering modeling techniques, basic polyhedral theory, simplex method, and duality theory. The third module is on nonlinear optimization and convex conic optimization, which is a significant generalization of linear optimization. The fourth and final module is on integer optimization, which augments the previously covered optimization models with the flexibility of integer decision variables. The course blends optimization theory and computation with various applications to modern data analytics.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.\n--> -->\n-->",
+  "overview": "The course will teach basic concepts, models, and algorithms in linear optimization, integer optimization, and convex optimization. The first module of the course is a general overview of key concepts in optimization and associated mathematical background. The second module of the course is on linear optimization, covering modeling techniques, basic polyhedral theory, simplex method, and duality theory. The third module is on nonlinear optimization and convex conic optimization, which is a significant generalization of linear optimization. The fourth and final module is on integer optimization, which augments the previously covered optimization models with the flexibility of integer decision variables. The course blends optimization theory and computation with various applications to modern data analytics.\nThis course is not foundational and does not count toward any specializations at present, but it can be counted as a free elective.",
   "background": "• Linear Algebra\n• Multivariate Calculus\n• Basic Probability\n• Familiarity with programming in Python",
   "goals": "• Learn modeling skills for formulating various analytics problems as linear, convex nonlinear, and integer optimization problems.\n• Learn basic optimization theory including duality theory and convexity theory, which will give the students a deeper understanding of not only how to formulate an optimization model, but also why.\n• Learn fundamental algorithmic schemes for solving linear, nonlinear, and integer optimization problems.\n• Learn computational skills for implementing and solving an optimization problem using modern optimization modeling language and solvers.",
   "team": [

@@ -31,7 +31,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
+import { PanelHandle } from '@/components/panel-handle'
+import { ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { TooltipProvider } from '@/components/ui/tooltip'
@@ -239,11 +240,7 @@ export default function App() {
           sync={api.sync}
           lastSyncedAt={api.lastSyncedAt}
           view={prefs.view}
-          libraryOpen={prefs.libraryOpen}
-          requirementsOpen={prefs.requirementsOpen}
           onView={(v) => setPref('view', v)}
-          onToggleLibrary={toggleLibrary}
-          onToggleRequirements={toggleRequirements}
           onSpecialization={api.setSpecialization}
           onOpenSettings={() => setSettingsOpen(true)}
           onOpenCommand={() => setCommandOpen(true)}
@@ -346,13 +343,27 @@ export default function App() {
             >
               {libraryEl}
             </ResizablePanel>
-            <ResizableHandle withHandle />
+            <PanelHandle
+              side="left"
+              open={prefs.libraryOpen}
+              label="course library"
+              onToggle={toggleLibrary}
+            />
 
             <ResizablePanel id="board" defaultSize="56%" minSize="30%" className="min-w-0">
-              <ScrollArea className="h-full">{boardEl}</ScrollArea>
+              {/* The tint belongs to the panel, not the scrolled content — otherwise a
+                  short plan leaves the bottom of the board bare. */}
+              <div className="h-full bg-board">
+                <ScrollArea className="h-full">{boardEl}</ScrollArea>
+              </div>
             </ResizablePanel>
 
-            <ResizableHandle withHandle />
+            <PanelHandle
+              side="right"
+              open={prefs.requirementsOpen}
+              label="requirements"
+              onToggle={toggleRequirements}
+            />
             <ResizablePanel
               panelRef={requirementsRef}
               id="requirements"

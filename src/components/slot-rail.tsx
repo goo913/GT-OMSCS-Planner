@@ -160,7 +160,7 @@ function SlotSquare({
             aria-label={`Empty slot: ${cell.restriction ?? cell.group}. Show the courses that fit.`}
           >
             <span className="mono text-[11px] opacity-50">——</span>
-            <span className="truncate text-[9px] leading-tight opacity-70">
+            <span className="w-full truncate text-[9px] leading-tight opacity-70">
               {cell.restriction ?? cell.group}
             </span>
           </button>

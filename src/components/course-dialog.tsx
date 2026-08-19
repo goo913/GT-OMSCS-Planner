@@ -6,6 +6,7 @@ import { backgroundTopics } from '@/lib/validate'
 import { checkCap } from '@/lib/placement'
 import { placementOf } from '@/lib/plan'
 import { termLabel } from '@/lib/terms'
+import { cn } from '@/lib/utils'
 import { MetricRow } from '@/components/metric'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -58,8 +59,8 @@ export function CourseDialog({
 
   return (
     <Dialog open={Boolean(code)} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="max-h-[88vh] gap-0 overflow-hidden p-0 sm:max-w-2xl">
-        <DialogHeader className="space-y-2 border-b px-6 py-4">
+      <DialogContent className="flex max-h-[88vh] flex-col gap-0 overflow-hidden p-0 sm:max-w-2xl">
+        <DialogHeader className="shrink-0 space-y-2 border-b px-6 py-4 pr-12">
           <div className="flex flex-wrap items-center gap-2">
             <span className="mono text-sm font-semibold">{code}</span>
             <span className="text-muted-foreground">·</span>
@@ -119,7 +120,7 @@ export function CourseDialog({
           )}
         </DialogHeader>
 
-        <div className="overflow-y-auto px-6 py-5">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-5">
           {oc && (
             <>
               <MetricRow
@@ -249,22 +250,23 @@ export function CourseDialog({
                 <h3 className="text-xs font-semibold tracking-wide text-muted-foreground uppercase">
                   Requirement fit
                 </h3>
-                <ul className="space-y-1 text-sm">
+                <ul className="divide-y rounded-md border text-sm">
                   {SPECIALIZATIONS.map((s) => {
                     const groups = s.groups.filter((g) => g.courses.includes(code!))
                     const active = s.id === plan.specialization
                     return (
                       <li
                         key={s.id}
-                        className={
-                          active ? 'flex gap-2 text-foreground' : 'flex gap-2 text-muted-foreground'
-                        }
+                        className={cn(
+                          'flex items-baseline gap-3 px-3 py-1.5',
+                          active ? 'bg-primary/5 text-foreground' : 'text-muted-foreground',
+                        )}
                       >
-                        <span className="w-32 shrink-0 truncate">{s.name}</span>
-                        <span className={active ? 'font-medium' : ''}>
-                          {groups.length
-                            ? groups.map((g) => g.label).join(' / ')
-                            : 'free elective'}
+                        <span className={cn('min-w-0 flex-1', active && 'font-medium')}>
+                          {s.name}
+                        </span>
+                        <span className={cn('shrink-0 text-right', active && 'font-medium')}>
+                          {groups.length ? groups.map((g) => g.label).join(' / ') : 'free elective'}
                         </span>
                       </li>
                     )

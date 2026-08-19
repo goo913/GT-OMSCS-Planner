@@ -52,13 +52,20 @@ def fetch(url, cache_key, binary=False):
 
 
 def clean(t):
+    # HTML comments first: GT's CMS leaves commented-out blocks in the body, and the
+    # generic tag strip would otherwise leave their "-->" tails behind as visible text.
+    t = re.sub(r'(?s)<!--.*?-->', ' ', t)
+    t = re.sub(r'(?s)<!--.*$', ' ', t)
+    t = re.sub(r'(?s)^.*?-->', ' ', t) if t.lstrip().startswith('-->') else t
     t = re.sub(r'(?s)<[^>]+>', ' ', t)
+    t = t.replace('-->', ' ')
     t = html.unescape(t).replace(' ', ' ').replace('​', '')
     return re.sub(r'[ \t]+', ' ', re.sub(r'\s*\n\s*', '\n', t)).strip()
 
 
 def para_text(fragment):
-    f = re.sub(r'(?is)<(script|style).*?</\1>', '', fragment)
+    f = re.sub(r'(?s)<!--.*?-->', '', fragment)
+    f = re.sub(r'(?is)<(script|style).*?</\1>', '', f)
     f = re.sub(r'(?i)<br\s*/?>', '\n', f)
     f = re.sub(r'(?i)</(p|li|h[1-6]|div)>', '\n\n', f)
     f = re.sub(r'(?i)<li[^>]*>', '• ', f)

@@ -3,6 +3,7 @@ import {
   AlertTriangle,
   Award,
   BookOpen,
+  Clock,
   CalendarDays,
   Info,
   MoreHorizontal,
@@ -86,11 +87,11 @@ export function Board({
   }
 
   return (
-    <div className="@container space-y-5 p-4">
+    <div className="@container space-y-6 p-4 pb-10">
       {[...years.entries()].map(([year, group]) => (
         <section key={year} className="space-y-2">
           <div className="flex items-center gap-3">
-            <span className="mono text-[10px] tracking-wider text-muted-foreground">
+            <span className="mono text-[11px] font-medium tracking-wider text-muted-foreground">
               {year}–{String(year + 1).slice(2)}
             </span>
             <Separator className="flex-1" />
@@ -121,7 +122,12 @@ export function Board({
         </section>
       ))}
 
-      <Button variant="outline" size="sm" onClick={onAddTerm} className="w-full border-dashed">
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={onAddTerm}
+        className="w-full border-dashed bg-transparent text-muted-foreground hover:bg-card hover:text-foreground"
+      >
         <Plus className="size-3.5" aria-hidden />
         Add term
       </Button>
@@ -201,17 +207,22 @@ function TermCard({
       }}
       onClick={() => onFocusTerm(term)}
       className={cn(
-        '@container/term flex flex-col rounded-lg border bg-card transition-colors',
-        focused && 'ring-2 ring-primary/30',
-        isDropTarget && !dropBlocked && 'border-primary bg-primary/5',
-        isDropTarget && dropBlocked && 'border-destructive bg-destructive/5',
-        summary?.overCap && 'border-destructive',
+        // The plan is what this app is for: the cards sit above a tinted board with a
+        // real edge and a shadow, so the eye lands here first and on the panels second.
+        '@container/term flex flex-col rounded-xl border bg-card shadow-sm transition-all',
+        'hover:shadow-md',
+        focused && 'border-primary/60 ring-2 ring-primary/25',
+        isDropTarget && !dropBlocked && 'border-primary ring-2 ring-primary/40',
+        isDropTarget && dropBlocked && 'border-destructive ring-2 ring-destructive/40',
+        summary?.overCap && 'border-destructive ring-1 ring-destructive/30',
       )}
       aria-label={termLabel(term)}
     >
       {/* one line of chrome */}
-      <header className="flex items-center gap-2 px-3 pt-2.5 pb-2">
-        <h3 className="min-w-0 flex-1 truncate text-sm font-medium">{termLabel(term)}</h3>
+      <header className="flex items-center gap-2 px-3.5 pt-3 pb-2">
+        <h3 className="min-w-0 flex-1 truncate text-[15px] font-semibold tracking-tight">
+          {termLabel(term)}
+        </h3>
 
         <Tooltip>
           <TooltipTrigger asChild>
@@ -374,11 +385,18 @@ function TermCard({
       {showWorkload && summary && summary.workloadHoursPerWeek > 0 && (
         <Tooltip>
           <TooltipTrigger asChild>
-            <div className="px-3 pb-2">
+            {/* A meter, not a rule: kept short and inset so it cannot be mistaken for
+                an underline on the term name. */}
+            <div className="flex items-center gap-2 px-3.5 pb-2.5">
+              <Clock className="size-3 shrink-0 text-muted-foreground" aria-hidden />
               <IntensityBar
                 value={summary.workloadHoursPerWeek}
                 max={RULES.workload.comfortableHoursPerWeek}
+                className="max-w-24"
               />
+              <span className="mono shrink-0 text-[10px] text-muted-foreground">
+                {Math.round(summary.workloadHoursPerWeek)}h/wk
+              </span>
             </div>
           </TooltipTrigger>
           <TooltipContent>
@@ -390,7 +408,7 @@ function TermCard({
 
       <Separator />
 
-      <div className="flex-1 space-y-1 p-2">
+      <div className="flex-1 space-y-1.5 p-2.5">
         {placements.map((p) => {
           const entry = lookup(p.code)
           const slot = slotByCode.get(p.code)
@@ -425,13 +443,15 @@ function TermCard({
                 }
               }}
               className={cn(
-                'group flex cursor-grab items-center gap-2 rounded-md border-l-2 px-2 py-1.5 transition-colors hover:bg-accent',
+                'group flex cursor-grab items-center gap-2.5 rounded-lg border border-transparent',
+                'border-l-[3px] bg-secondary/60 px-2.5 py-2 transition-colors',
+                'hover:border-border hover:bg-accent',
                 seminar ? 'border-l-border' : slot ? 'border-l-primary' : 'border-l-gold-surface',
-                broken && 'bg-destructive/5',
+                broken && 'border-l-destructive bg-destructive/5',
               )}
             >
-              <span className="mono shrink-0 text-[12px] font-semibold">{p.code}</span>
-              <span className="min-w-0 flex-1 truncate text-[12px] text-muted-foreground">
+              <span className="mono shrink-0 text-[13px] font-bold">{p.code}</span>
+              <span className="min-w-0 flex-1 truncate text-[13px] text-foreground/75">
                 {entry?.title}
               </span>
               {validation.trackGrades && p.grade && (
@@ -478,7 +498,7 @@ function TermCard({
         })}
 
         {placements.length === 0 && !dragging && (
-          <p className="px-2 py-3 text-center text-[11px] text-muted-foreground">
+          <p className="rounded-lg border border-dashed px-2 py-4 text-center text-xs text-muted-foreground">
             {focused ? 'Pick a course from the library' : 'Empty'}
           </p>
         )}

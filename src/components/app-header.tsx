@@ -7,8 +7,6 @@ import {
   FileText,
   LayoutGrid,
   MoreHorizontal,
-  PanelLeft,
-  PanelRight,
   Printer,
   RotateCcw,
   Settings,
@@ -48,11 +46,7 @@ export function AppHeader({
   sync,
   lastSyncedAt,
   view,
-  libraryOpen,
-  requirementsOpen,
   onView,
-  onToggleLibrary,
-  onToggleRequirements,
   onSpecialization,
   onOpenSettings,
   onOpenCommand,
@@ -63,11 +57,7 @@ export function AppHeader({
   sync: SyncState
   lastSyncedAt: number | null
   view: 'plan' | 'summary'
-  libraryOpen: boolean
-  requirementsOpen: boolean
   onView: (v: 'plan' | 'summary') => void
-  onToggleLibrary: () => void
-  onToggleRequirements: () => void
   onSpecialization: (id: string) => void
   onOpenSettings: () => void
   onOpenCommand: () => void
@@ -143,41 +133,6 @@ export function AppHeader({
           Summary
         </ToggleGroupItem>
       </ToggleGroup>
-
-      {view === 'plan' && (
-        <div className="hidden items-center lg:flex">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={cn('size-7', libraryOpen && 'bg-accent')}
-                onClick={onToggleLibrary}
-                aria-label="Toggle course library"
-                aria-pressed={libraryOpen}
-              >
-                <PanelLeft className="size-4" aria-hidden />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>Course library</TooltipContent>
-          </Tooltip>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={cn('size-7', requirementsOpen && 'bg-accent')}
-                onClick={onToggleRequirements}
-                aria-label="Toggle requirements"
-                aria-pressed={requirementsOpen}
-              >
-                <PanelRight className="size-4" aria-hidden />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>Requirements</TooltipContent>
-          </Tooltip>
-        </div>
-      )}
 
       <Tooltip>
         <TooltipTrigger asChild>
