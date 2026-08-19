@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {
   AlertTriangle,
   Award,
+  BookOpen,
   CalendarDays,
   Info,
   MoreHorizontal,
@@ -216,13 +217,16 @@ function TermCard({
           <TooltipTrigger asChild>
             <span
               className={cn(
-                'mono shrink-0 text-[11px]',
+                'flex shrink-0 items-center gap-1 text-[11px]',
                 summary?.overCap ? 'font-semibold text-destructive' : 'text-muted-foreground',
               )}
             >
-              {courseCount}/{maxCourses}
-              <span className="opacity-50"> · </span>
-              {hours}h
+              <BookOpen className="size-3" aria-hidden />
+              <span className="mono">
+                {courseCount}/{maxCourses}
+              </span>
+              <span className="opacity-40">·</span>
+              <span className="mono">{hours}h</span>
             </span>
           </TooltipTrigger>
           <TooltipContent>
