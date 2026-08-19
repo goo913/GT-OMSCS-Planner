@@ -26,6 +26,10 @@ const ok = (label, cond) => { if (!cond) fails++; console.log(`${cond ? '  ok  '
   await page.getByRole('button', { name: 'Courses' }).click()
   await page.getByRole('searchbox').fill('6035')
   await page.waitForTimeout(300)
+  // This may run against a shared Firestore document that already holds placements,
+  // so assert on the change this test causes, not on absolute counts.
+  const before = await page.locator('.placement').count()
+  const slotsBefore = Number((await page.locator('.slotstrip-title').innerText()).match(/^(\d+)/)[1])
   const placeBtn = page.locator('.course-row').first().getByRole('button', { name: /Place/ })
   ok('library shows a Place button', await placeBtn.count() === 1)
   await placeBtn.click()
@@ -43,12 +47,13 @@ const ok = (label, cond) => { if (!cond) fails++; console.log(`${cond ? '  ok  '
   await page.waitForTimeout(300)
   const placed = page.locator('.placement').filter({ hasText: 'CS 6035' })
   ok('the course lands on the board', await placed.count() === 1)
-  ok('slot strip counts it', /1 of 10/.test(await page.locator('.slotstrip-title').innerText()))
+  const slotsAfter = Number((await page.locator('.slotstrip-title').innerText()).match(/^(\d+)/)[1])
+  ok('slot strip counts it', slotsAfter === slotsBefore + 1)
 
   // remove it again
   await placed.getByRole('button', { name: /Remove/ }).click()
   await page.waitForTimeout(300)
-  ok('removing takes it back off', await page.locator('.placement').count() === 0)
+  ok('removing takes it back off', await page.locator('.placement').count() === before)
   ok('no page errors on mobile', errs.length === 0)
   // horizontal overflow check
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)

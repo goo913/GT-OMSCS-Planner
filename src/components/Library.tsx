@@ -208,21 +208,34 @@ export function Library({
           ? seminars.map((s) => (
               <SeminarRow key={s.code} seminar={s} plan={plan} onOpen={onOpen} onSelect={onSelect} selected={selected} onDragCode={onDragCode} />
             ))
-          : courses.map((c) => (
-              <CourseRow
-                key={c.code}
-                course={c}
-                plan={plan}
-                specId={specId}
-                relevant={specCodes.has(c.code)}
-                selected={selected === c.code}
-                comparing={compare.includes(c.code)}
-                onOpen={onOpen}
-                onSelect={onSelect}
-                onToggleCompare={onToggleCompare}
-                onDragCode={onDragCode}
-              />
-            ))}
+          : courses.map((c, i) => {
+              // Sorted by relevance, the list is really two lists: what your
+              // specialization names, and everything else. Say so.
+              const relevant = specCodes.has(c.code)
+              const header =
+                f.sort === 'relevance' && (i === 0 || specCodes.has(courses[i - 1].code) !== relevant)
+                  ? relevant
+                    ? `Counts toward ${spec?.short ?? 'the specialization'}`
+                    : 'Free electives — every other OMSCS course'
+                  : null
+              return (
+                <li key={c.code} style={{ display: 'contents' }}>
+                  {header && <div className="lib-divider">{header}</div>}
+                  <CourseRow
+                    course={c}
+                    plan={plan}
+                    specId={specId}
+                    relevant={relevant}
+                    selected={selected === c.code}
+                    comparing={compare.includes(c.code)}
+                    onOpen={onOpen}
+                    onSelect={onSelect}
+                    onToggleCompare={onToggleCompare}
+                    onDragCode={onDragCode}
+                  />
+                </li>
+              )
+            })}
         {!courses.length && !f.showSeminars && (
           <li style={{ padding: '14px 12px' }} className="dim">
             No courses match those filters.
@@ -259,7 +272,6 @@ function CourseRow({
   const placement = placementOf(plan, course.code)
   const oc = course.omscentral
   return (
-    <li>
       <div
         className="course-row"
         data-placed={Boolean(placement)}
@@ -320,7 +332,6 @@ function CourseRow({
           {oc?.reviewCount ? <span className="dim">{oc.reviewCount} rev</span> : null}
         </div>
       </div>
-    </li>
   )
 }
 

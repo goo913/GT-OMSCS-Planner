@@ -728,6 +728,20 @@ textarea {
   }
 }
 
+.lib-divider {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 6px 12px 4px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--rule);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
 .course-row {
   display: grid;
   grid-template-columns: 1fr auto;
